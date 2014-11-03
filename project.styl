@@ -1,0 +1,18 @@
+#readymade
+  
+  @import './readymade/readymade.styl'
+  // Overrides default styles here!
+  
+  .readymade-subnav
+    > a
+      background: darken(white, 10%)
+      
+      &[aria-selected=true]
+        background: white
+
+  .marking-surface-tool[data-focused] .marking-surface-tool-focus-root
+    filter: none
+
+  .marking-surface-tool[data-selected] .marking-surface-tool-selected-root
+    filter: none
+

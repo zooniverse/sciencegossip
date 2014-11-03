@@ -1,0 +1,108 @@
+h1
+  margin: 0
+
+h2
+  line-height: inherit
+  
+[role=navigation]
+  list-style-type: none
+  padding: 0
+  
+  li
+    display: inline
+    text-indent: 0
+    margin: 0
+    padding: 0
+
+.readymade-has-clickable
+  >input:first-child
+    position: absolute
+    display:inline-block
+    opacity: 0
+    left: -500px
+    
+    &:focus + .readymade-clickable
+      border: 1px solid white
+
+.readymade-choice-input-wrapper
+  input
+    visibility: visible
+    opacity: 0
+
+.readymade-mini-tutorial-underlay
+
+  &[data-transitioning],
+  &[aria-hidden=false]
+    display: block
+  
+  &[aria-hidden=false]
+    opacity: 1
+
+  &[aria-hidden=false] > .readymade-mini-tutorial-dialog
+    transform: translate(-50%, -50%) scale(1, 1)
+      
+.readymade-mini-tutorial-dialog
+  background-color: white
+  
+.readymade-mini-tutorial-image
+
+  &:not([data-readymade-active])
+    display: block
+
+.readymade-mini-tutorial-content
+  &:not([data-readymade-active])
+    display: block
+
+[name="readymade-mini-tutorial-stepper"]
+  height: .8em
+  overflow: hidden
+
+  & > .readymade-mini-tutorial-button-label
+    display: block
+    height: 0
+    width: 0
+    line-height: 0
+    text-indent: -50px
+
+  &[aria-selected=false]::after
+    opacity: 0.5
+  &[aria-selected=true]::after
+    opacity: 1
+
+[role=tabPanel]
+  &[aria-selected=false]
+    display: none
+
+  &[aria-selected=true]
+    display: block
+
+.readymade-field-guide
+  [role=tab]
+
+    &[aria-selected=true]
+      background: #fff
+      -webkit-border-radius: 3px 3px 0 0
+      border-radius: 3px 3px 0 0
+      padding-top: 5px
+
+.readymade-field-guide-example
+  display: inline-block
+  max-width: 48%
+
+.readymade-classification-interface
+  width: 100%
+  
+.readymade-subject-viewer-container
+  display: inline-block
+  width: 80%
+
+.readymade-decision-tree-container
+  display: inline-block
+  max-width: 19%
+  vertical-align: top
+
+.readymade-summary-container
+  display: inline-block
+  max-width: 15%
+  vertical-align: top
+      
