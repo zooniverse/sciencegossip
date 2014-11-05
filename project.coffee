@@ -26,19 +26,7 @@ module.exports =
       choices: [{
         type: Rectangle
         label: 'Mark an illustration'
-        color: '#ffffff'
-      }]
-      next: 'type'
-    type:
-      type: 'radio'
-      question: 'What type of illustraton is it?'
-      key: 'type'
-      choices:[{
-        value: 'choice1'
-        label: 'Choice 1'
-      }, {
-        value: 'choice2'
-        label: 'Choice 2'
+        color: '#333333'
       }]
 
   firstTask: 'illustration'
