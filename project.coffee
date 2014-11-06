@@ -1,4 +1,5 @@
 Rectangle = require './drawing-tools/rectangle'
+Details = require './tasks/details'
 
 module.exports =
   id: 'bhl'
@@ -22,12 +23,24 @@ module.exports =
   tasks:
     illustration:
       type: 'drawing'
-      question: 'Mark an illustration.'
+      question: 'Draw rectangles around the illustrations on this page.'
       choices: [{
         type: Rectangle
-        label: 'Mark an illustration'
+        label: 'Mark the illustrations'
         color: '#333333'
       }]
+      next: 'details'
+    details:
+      type: 'details'
+      question: 'Add information about the illustrations.'
+      choices: [{
+        label: 'Type'
+        value: ''
+      },{
+        label: 'Artist'
+        value: ''
+      }]
+      next: 'details'
 
   firstTask: 'illustration'
 
