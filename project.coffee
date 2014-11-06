@@ -2,7 +2,7 @@ Rectangle = require './drawing-tools/rectangle'
 
 module.exports =
   id: 'bhl'
-  background: ''
+  background: 'background.jpg'
 
   producer: 'Biodiversity Heritage Library & Zooniverse'
   title: 'Illustrated Life'
