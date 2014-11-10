@@ -3,8 +3,27 @@ DecisionTree = require 'zooniverse-decision-tree'
 class DetailsTask extends DecisionTree.Task
   @type: 'details'
   @currentIndex: 0
+  
+  template: -> """
+    <div class='decision-tree-question'>#{@question}</div>
 
-  choiceTemplate: require './details-form'
+    <form class='decision-tree-choices'>
+      <label class='readymade-choice-label'>Type
+        <select name="type">
+          <option>Lithograph</option>
+          <option>Etching</option>
+          <option>Drawing</option>
+        </select>
+      </label>
+      <label class='readymade-choice-label'>Artist
+        <input type=text name=artist>
+      </label>
+    </form>
+
+    <div class='decision-tree-confirmation'>
+      <button type='button' name='#{@confirmButtonName}'>#{@confirmButtonLabel}</button>
+    </div>
+  """
   
   enter: =>
     console.log 'enter'
@@ -12,9 +31,16 @@ class DetailsTask extends DecisionTree.Task
     DetailsTask.currentIndex ?= 0
     @value ?=
       index: DetailsTask.currentIndex
+      details: [{name: 'type', value: 'Lithograph'}, {name: 'artist', value: ''}]
+  
+  renderTemplate: =>
+    super
+    @form = $(@el).find 'form'
+    if @value?
+      @form.find("[name=#{o.name}]").val(o.value) for o in @value.details
 
   getNext: =>
-    DetailsTask.currentIndex++
+    DetailsTask.currentIndex = @value.index + 1
     @next
   
   exit: ->
@@ -24,9 +50,16 @@ class DetailsTask extends DecisionTree.Task
   getChoice: ->
 
   getValue: ->
+    @value.details = @form.serializeArray()
     @value
 
   reset: (value) ->
+    console.log 'reset' unless value?
+    value ?=
+      index: DetailsTask.currentIndex
+      details: [{name: 'type', value: 'Lithograph'}, {name: 'artist', value: ''}]
+    
+    @form.find("[name=#{o.name}]").val(o.value) for o in value.details
     @value = value
 
 DecisionTree.registerTask DetailsTask
