@@ -3,7 +3,7 @@ teamPageTemplate = require './templates/team-page'
 content = 
   organizations: [{
     image: '//placehold.it/100.png?text=Example'
-    name: 'Biodiversity Heritage Library'
+    name: 'Missouri Botanical Garden'
     description: 'description'
   },{
     image: '//placehold.it/100.png?text=Example'
