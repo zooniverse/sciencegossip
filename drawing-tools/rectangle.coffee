@@ -3,9 +3,6 @@ ToolControls = require './tool-controls'
 
 class Rectangle extends RectangleTool
   @Controls: ToolControls
-  @count = 0
-  defaultRadius: 20
-  defaultSquash: 1.5
     
   render: ->
     super
