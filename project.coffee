@@ -21,6 +21,17 @@ module.exports =
   }]
 
   tasks:
+    illustrations:
+      type: 'radio'
+      question: 'Are there any illustrations on this page?'
+      choices: [{
+        label: 'Yes'
+        value: 'yes'
+        next: 'illustration'
+      },{
+        label: 'No'
+        value: 'no'
+      }]
     illustration:
       type: 'drawing'
       question: 'Draw rectangles around the illustrations on this page.'
@@ -42,5 +53,5 @@ module.exports =
       }]
       next: 'details'
 
-  firstTask: 'illustration'
+  firstTask: 'illustrations'
 
