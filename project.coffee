@@ -52,7 +52,6 @@ module.exports =
       choices: [{
         type: Pinpoint
         label: 'Caption'
-        value: ''
       }]
       next: 'details'
 

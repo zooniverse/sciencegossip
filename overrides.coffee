@@ -61,13 +61,23 @@ ms.on 'marking-surface:add-tool', (tool) ->
 LAST_TASK = false
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+  rectangles = []
+  for tool in ms.tools
+    tool.deselect()
+    tool.disable()
+    console.log tool.mark._taskIndex
+    rectangles.push tool if tool.mark._taskIndex is 1
+    if tool.attr(subjectViewer.FROM_CURRENT_TASK) == 'true'
+      tool.enable()
+      tool.select()
+ 
   if task.key is 'illustration'
     ms.rescale(0,0,subjectViewer.maxWidth,subjectViewer.maxHeight)
     DetailsTask.currentIndex = 0 
   
   if task.key is 'details'
     index = task.value.index
-    tool = ms.tools[index]
+    tool = rectangles[index]
     if tool.mark.details?
       task.reset
         index: index
