@@ -10,22 +10,36 @@ classify_page = currentProject.classifyPages[0]
 ms = subjectViewer.markingSurface
 
 ms.rescale = (x, y, width, height) ->
-  return if ms.root.el.getBoundingClientRect().width is 0 # don't rescale when surface isn't visible
+  return if @root.el.getBoundingClientRect().width is 0 # don't rescale when surface isn't visible
   currentViewBox = @svg.attr('viewBox')?.split /\s+/
   x ?= currentViewBox?[0] ? 0
   y ?= currentViewBox?[1] ? 0
   width ?= currentViewBox?[2] ? 0
   height ?= currentViewBox?[3] ? 0
+  x = parseInt x
+  y = parseInt y
+  width = parseInt width
+  height = parseInt height
   @svg.attr 'viewBox', [x, y, width, height].join ' '
-  @scaleX = ms.root.el.getBoundingClientRect().width / subjectViewer.maxWidth
-  @scaleY = ms.root.el.getBoundingClientRect().height / subjectViewer.maxHeight
-  ms.magnification = ms.root.el.getBoundingClientRect().width / subjectViewer.maxWidth
+  @scaleX = @root.el.getBoundingClientRect().width / subjectViewer.maxWidth
+  @scaleY = @root.el.getBoundingClientRect().height / subjectViewer.maxHeight
+  @magnification = @root.el.getBoundingClientRect().width / subjectViewer.maxWidth
+  w = parseInt @svg.attr 'width'
+  h = parseInt @svg.attr 'height'
+  w = w / @magnification
+  h = h / @magnification
+  x = x + .5 * (width - w)
+  y = y + .5 * (height - h)
+  x = Math.max x, 0
+  y = Math.max y, 0
+  
+  @svg.attr 'viewBox', [x, y, w, h].join ' '
   @renderTools()
 
 ms.screenPixelToScale = ({x, y}) ->
   if @svg.el.viewBox.animVal?
-    x = x / @scaleX
-    y = y / @scaleY
+    x = x / @magnification
+    y = y / @magnification
     viewBox = @svg.el.viewBox.animVal
     x += viewBox.x
     y += viewBox.y
@@ -36,13 +50,13 @@ ms.scalePixelToScreen = ({x, y}) ->
     viewBox = @svg.el.viewBox.animVal
     x -= viewBox.x
     y -= viewBox.y
-    x = x * @scaleX
-    y = y * @scaleY
+    x = x * @magnification
+    y = y * @magnification
   {x, y}
 
 # set the image scale if not already set  
 ms.on 'marking-surface:add-tool', (tool) ->
-  ms.rescale() if ms.magnification is 0
+  @rescale() if @magnification is 0
 
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
@@ -52,9 +66,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   
   if task.key is 'details'
     index = task.value.index
-    console.log index
     tool = ms.tools[index]
-    tool.select()
     if tool.mark.details?
       task.reset
         index: index

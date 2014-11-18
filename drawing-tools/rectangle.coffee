@@ -3,6 +3,9 @@ ToolControls = require './tool-controls'
 
 class Rectangle extends RectangleTool
   @Controls: ToolControls
+  
+  coords: (e) ->
+    @markingSurface.screenPixelToScale @markingSurface.svg.pointerOffset e
     
   render: ->
     super
