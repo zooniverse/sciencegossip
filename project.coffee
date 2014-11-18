@@ -1,4 +1,5 @@
 Rectangle = require './drawing-tools/rectangle'
+Pinpoint = require './drawing-tools/pinpoint'
 Details = require './tasks/details'
 
 module.exports =
@@ -44,11 +45,13 @@ module.exports =
     details:
       type: 'details'
       question: 'Add information about the illustrations.'
+      next: 'parts'
+    parts: 
+      type: 'drawing'
+      question: 'Mark any parts of the illustration.'
       choices: [{
-        label: 'Type'
-        value: ''
-      },{
-        label: 'Artist'
+        type: Pinpoint
+        label: 'Caption'
         value: ''
       }]
       next: 'details'

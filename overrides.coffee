@@ -58,6 +58,7 @@ ms.scalePixelToScreen = ({x, y}) ->
 ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @magnification is 0
 
+LAST_TASK = false
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   if task.key is 'illustration'
@@ -72,7 +73,10 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
         index: index
         details: tool.mark.details
     ms.rescale tool.mark.left - 10, tool.mark.top - 10, tool.mark.width + 20, tool.mark.height + 20
-    if index == ms.tools.length - 1
+    LAST_TASK = index == ms.tools.length - 1
+  
+  if task.key is 'parts'
+    if LAST_TASK
       task.next = null
     else
       task.next = 'details'
