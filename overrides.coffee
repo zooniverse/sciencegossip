@@ -65,7 +65,6 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   for tool in ms.tools
     tool.deselect()
     tool.disable()
-    console.log tool.mark._taskIndex
     rectangles.push tool if tool.mark._taskIndex is 1
     if tool.attr(subjectViewer.FROM_CURRENT_TASK) == 'true'
       tool.enable()
@@ -83,7 +82,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
         index: index
         details: tool.mark.details
     ms.rescale tool.mark.left - 10, tool.mark.top - 10, tool.mark.width + 20, tool.mark.height + 20
-    LAST_TASK = index == ms.tools.length - 1
+    LAST_TASK = index == rectangles.length - 1
   
   if task.key is 'parts'
     if LAST_TASK

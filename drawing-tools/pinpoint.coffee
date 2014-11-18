@@ -7,7 +7,6 @@ class Pinpoint extends BasePoint
   constructor: ->
     super
     @disc.attr 'class', 'pinpoint'
-    console.log @mark
 
   rescale: (scale) ->
     super

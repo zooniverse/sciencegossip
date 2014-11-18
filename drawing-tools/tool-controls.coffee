@@ -5,6 +5,8 @@ class AccessibleControls extends ToolControls
   constructor: ->
     super
     
+    @taskTypes.text = require '../tasks/text'
+    
     @tool.addEvent 'marking-surface:tool:select', @onToolSelect
     @tool.addEvent 'marking-surface:tool:deselect', @onToolDeselect
     

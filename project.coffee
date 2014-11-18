@@ -52,6 +52,16 @@ module.exports =
       choices: [{
         type: Pinpoint
         label: 'Caption'
+        color: '#333'
+        details:[{
+          type: 'text'
+          question: 'Text here'
+          choices:[{
+            value: 'text'
+            key: 'caption'
+            label: 'Caption'
+          }]
+        }]
       }]
       next: 'details'
 
