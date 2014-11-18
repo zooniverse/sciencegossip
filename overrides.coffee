@@ -12,18 +12,18 @@ ms = subjectViewer.markingSurface
 ms.rescale = (x, y, width, height) ->
   return if @root.el.getBoundingClientRect().width is 0 # don't rescale when surface isn't visible
   currentViewBox = @svg.attr('viewBox')?.split /\s+/
-  x ?= currentViewBox?[0] ? 0
-  y ?= currentViewBox?[1] ? 0
-  width ?= currentViewBox?[2] ? 0
-  height ?= currentViewBox?[3] ? 0
-  x = parseInt x
-  y = parseInt y
-  width = parseInt width
-  height = parseInt height
+  x ?= parseInt currentViewBox?[0] ? 0
+  y ?= parseInt currentViewBox?[1] ? 0
+  width ?= parseInt currentViewBox?[2] ? 0
+  height ?= parseInt currentViewBox?[3] ? 0
   @svg.attr 'viewBox', [x, y, width, height].join ' '
-  @scaleX = @root.el.getBoundingClientRect().width / subjectViewer.maxWidth
-  @scaleY = @root.el.getBoundingClientRect().height / subjectViewer.maxHeight
-  @magnification = @root.el.getBoundingClientRect().width / subjectViewer.maxWidth
+  
+  root = @root.el.getBoundingClientRect()
+  @scaleX = root.width / subjectViewer.maxWidth
+  @scaleY = root.height / subjectViewer.maxHeight
+  @magnification = root.width / subjectViewer.maxWidth
+  
+  # recalculate the viewbox so that the aspect ratio matches the SVG element
   w = parseInt @svg.attr 'width'
   h = parseInt @svg.attr 'height'
   w = w / @magnification
@@ -32,7 +32,8 @@ ms.rescale = (x, y, width, height) ->
   y = y + .5 * (height - h)
   x = Math.max x, 0
   y = Math.max y, 0
-  
+  x = Math.min x, subjectViewer.maxWidth - w
+  y = Math.min y, subjectViewer.maxHeight - h
   @svg.attr 'viewBox', [x, y, w, h].join ' '
   @renderTools()
 
