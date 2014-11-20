@@ -56,6 +56,7 @@ module.exports =
         details:[{
           type: 'text'
           question: 'Text here'
+          key: 'parts'
           choices:[{
             value: 'text'
             key: 'caption'
