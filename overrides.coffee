@@ -101,7 +101,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   if task.key is 'parts'
     LAST_TASK = rect_index == rectangles.length - 1
     if LAST_TASK
-      task.next = null
+      task.next = 'review'
     else
       task.next = 'details'
   

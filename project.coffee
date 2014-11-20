@@ -65,6 +65,13 @@ module.exports =
         }]
       }]
       next: 'details'
+    review:
+      type: 'button'
+      question: "Use the 'Back' button to review your work, or click 'Finished' to move on to the next page."
+      choices: [{
+        label: 'Finished'
+        next: null
+      }]
 
   firstTask: 'illustrations'
 
