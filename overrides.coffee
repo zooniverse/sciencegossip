@@ -60,9 +60,11 @@ ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @magnification is 0
 
 LAST_TASK = false
-index = 0
 INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
 ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
+MARGIN = 25 # margin on cropped images
+
+index = 0
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
@@ -78,9 +80,14 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   
   if rectangles.length > 0
     tool = rectangles[rect_index]
-    ms.rescale tool.mark.left - 10, tool.mark.top - 10, tool.mark.width + 20, tool.mark.height + 20
+    w = tool.mark.width + MARGIN * 2
+    h = tool.mark.height + MARGIN * 2
+    ms.svg.attr 'width', w
+    ms.svg.attr 'height', h
+    ms.rescale tool.mark.left - MARGIN, tool.mark.top - MARGIN, w, h
  
   if task.key is 'illustration'
+    subjectViewer.rescale()
     ms.rescale(0,0,subjectViewer.maxWidth,subjectViewer.maxHeight)
     DetailsTask.currentIndex = 0 
   
