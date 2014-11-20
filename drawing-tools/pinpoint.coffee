@@ -21,8 +21,10 @@ class Pinpoint extends BasePoint
   render: ->
     super
     
+    offset = @radius / @markingSurface.magnification
+    
     @controls.moveTo
-      x: @mark.x + 30
+      x: @mark.x + offset
       y: @mark.y
 
 module.exports = Pinpoint
