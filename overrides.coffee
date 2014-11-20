@@ -60,6 +60,9 @@ ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @magnification is 0
 
 LAST_TASK = false
+index = 0
+INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
+ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
@@ -70,6 +73,12 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     if tool.attr(subjectViewer.FROM_CURRENT_TASK) == 'true'
       tool.enable()
       tool.select()
+  
+  rect_index = parseInt (subjectViewer.taskIndex - INITIAL_STEPS) / ANNOTATION_STEPS
+  
+  if rectangles.length > 0
+    tool = rectangles[rect_index]
+    ms.rescale tool.mark.left - 10, tool.mark.top - 10, tool.mark.width + 20, tool.mark.height + 20
  
   if task.key is 'illustration'
     ms.rescale(0,0,subjectViewer.maxWidth,subjectViewer.maxHeight)
@@ -77,12 +86,10 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   
   if task.key is 'details'
     index = task.value.index
-    tool = rectangles[index]
     if tool.mark.details?
       task.reset
         index: index
         details: tool.mark.details
-    ms.rescale tool.mark.left - 10, tool.mark.top - 10, tool.mark.width + 20, tool.mark.height + 20
     LAST_TASK = index == rectangles.length - 1
   
   if task.key is 'parts'
