@@ -97,9 +97,9 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
       task.reset
         index: index
         details: tool.mark.details
-    LAST_TASK = index == rectangles.length - 1
   
   if task.key is 'parts'
+    LAST_TASK = rect_index == rectangles.length - 1
     if LAST_TASK
       task.next = null
     else
