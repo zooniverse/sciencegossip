@@ -55,7 +55,6 @@ module.exports =
         color: '#333'
         details:[{
           type: 'text'
-          question: 'Text here'
           key: 'parts'
           choices:[{
             value: 'text'
