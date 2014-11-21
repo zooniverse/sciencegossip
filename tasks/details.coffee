@@ -2,7 +2,6 @@ DecisionTree = require 'zooniverse-decision-tree'
 
 class DetailsTask extends DecisionTree.Task
   @type: 'details'
-  @currentIndex: 0
   
   template: -> """
     <div class='decision-tree-question'>#{@question}</div>
@@ -28,10 +27,6 @@ class DetailsTask extends DecisionTree.Task
   enter: =>
     console.log 'enter'
     super
-    DetailsTask.currentIndex ?= 0
-    @value ?=
-      index: DetailsTask.currentIndex
-      details: [{name: 'type', value: 'Lithograph'}, {name: 'artist', value: ''}]
   
   renderTemplate: =>
     super
@@ -40,7 +35,6 @@ class DetailsTask extends DecisionTree.Task
       @form.find("[name=#{o.name}]").val(o.value) for o in @value.details
 
   getNext: =>
-    DetailsTask.currentIndex = @value.index + 1
     @next
   
   exit: ->
@@ -56,7 +50,6 @@ class DetailsTask extends DecisionTree.Task
   reset: (value) ->
     console.log 'reset' unless value?
     value ?=
-      index: DetailsTask.currentIndex
       details: [{name: 'type', value: 'Lithograph'}, {name: 'artist', value: ''}]
     
     @form.find("[name=#{o.name}]").val(o.value) for o in value.details

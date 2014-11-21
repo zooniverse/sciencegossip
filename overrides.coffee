@@ -64,7 +64,8 @@ INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
 ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
 MARGIN = 25 # margin on cropped images
 
-index = 0
+current_tool = null
+
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
@@ -79,24 +80,16 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rect_index = parseInt (subjectViewer.taskIndex - INITIAL_STEPS) / ANNOTATION_STEPS
   
   if rectangles.length > 0
-    tool = rectangles[rect_index]
-    w = tool.mark.width + MARGIN * 2
-    h = tool.mark.height + MARGIN * 2
+    current_tool = rectangles[rect_index]
+    w = current_tool.mark.width + MARGIN * 2
+    h = current_tool.mark.height + MARGIN * 2
     ms.svg.attr 'width', w
     ms.svg.attr 'height', h
-    ms.rescale tool.mark.left - MARGIN, tool.mark.top - MARGIN, w, h
+    ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
  
   if task.key is 'illustration'
     subjectViewer.rescale()
     ms.rescale(0,0,subjectViewer.maxWidth,subjectViewer.maxHeight)
-    DetailsTask.currentIndex = 0 
-  
-  if task.key is 'details'
-    index = task.value.index
-    if tool.mark.details?
-      task.reset
-        index: index
-        details: tool.mark.details
   
   if task.key is 'parts'
     LAST_TASK = rect_index == rectangles.length - 1
@@ -109,4 +102,4 @@ classify_page.el.on 'decision-tree:task-confirm', ({originalEvent: {detail}})->
   console.log 'confirm'
   
   if detail.details?
-    ms.tools[detail.index].mark.details = detail.details
+    current_tool.mark.details = detail.details
