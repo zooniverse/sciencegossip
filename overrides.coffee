@@ -1,6 +1,4 @@
 require './readymade/overrides.coffee'
-DetailsTask = require './tasks/details'
-DecisionTree = require 'zooniverse-decision-tree'
 
 currentProject = require 'zooniverse-readymade/current-project'
 classify_page = currentProject.classifyPages[0]
@@ -103,3 +101,4 @@ classify_page.el.on 'decision-tree:task-confirm', ({originalEvent: {detail}})->
   
   if detail.details?
     current_tool.mark.details = detail.details
+    
