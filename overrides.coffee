@@ -89,6 +89,10 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     ms.svg.attr 'height', h
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
   
+  if task.key is 'details'
+    task.reset if current_tool.mark.details?
+      details: current_tool.mark.details
+  
   if task.key is 'parts'
     LAST_TASK = rect_index == rectangles.length - 1
     if LAST_TASK
@@ -99,6 +103,6 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
 classify_page.el.on 'decision-tree:task-confirm', ({originalEvent: {detail}})->
   console.log 'confirm'
   
-  if detail.details?
+  if detail?.details?
     current_tool.mark.details = detail.details
     
