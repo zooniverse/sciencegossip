@@ -100,9 +100,9 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     else
       task.next = 'details'
   
-classify_page.el.on 'decision-tree:task-confirm', ({originalEvent: {detail}})->
-  console.log 'confirm'
+classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
+  {key, value} = detail
   
-  if detail?.details?
-    current_tool.mark.details = detail.details
+  if key is 'details'
+    current_tool.mark.details = value.details
     
