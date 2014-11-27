@@ -8,7 +8,8 @@ classify_page = currentProject.classifyPages[0]
 ms = subjectViewer.markingSurface
 
 ms.rescale = (x, y, width, height) ->
-  return if @root.el.getBoundingClientRect().width is 0 # don't rescale when surface isn't visible
+  root = @root.el.getBoundingClientRect()
+  return if root.width is 0 # don't rescale when surface isn't visible
   currentViewBox = @svg.attr('viewBox')?.split /\s+/
   x ?= parseInt currentViewBox?[0] ? 0
   y ?= parseInt currentViewBox?[1] ? 0
