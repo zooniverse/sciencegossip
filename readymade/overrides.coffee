@@ -1,5 +1,6 @@
 require './shims/classlist.js'
 require './project'
+require './marking-surface'
 require './site-header'
 team_page = require './team-page'
       
