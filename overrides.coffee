@@ -20,13 +20,13 @@ ms.rescale = (x, y, width, height) ->
   root = @root.el.getBoundingClientRect()
   @scaleX = root.width / subjectViewer.maxWidth
   @scaleY = root.height / subjectViewer.maxHeight
-  @magnification = root.width / subjectViewer.maxWidth
+  @magnification = (@scaleX + @scaleY) / 2
   
   # recalculate the viewbox so that the aspect ratio matches the SVG element
   w = parseInt @svg.attr 'width'
   h = parseInt @svg.attr 'height'
-  w = w / @magnification
-  h = h / @magnification
+  w = w / @scaleX
+  h = h / @scaleY
   x = x + .5 * (width - w)
   y = y + .5 * (height - h)
   x = Math.max x, 0
@@ -38,8 +38,8 @@ ms.rescale = (x, y, width, height) ->
 
 ms.screenPixelToScale = ({x, y}) ->
   if @svg.el.viewBox.animVal?
-    x = x / @magnification
-    y = y / @magnification
+    x = x / @scaleX
+    y = y / @scaleY
     viewBox = @svg.el.viewBox.animVal
     x += viewBox.x
     y += viewBox.y
@@ -50,13 +50,13 @@ ms.scalePixelToScreen = ({x, y}) ->
     viewBox = @svg.el.viewBox.animVal
     x -= viewBox.x
     y -= viewBox.y
-    x = x * @magnification
-    y = y * @magnification
+    x = x * @scaleX
+    y = y * @scaleY
   {x, y}
 
 # set the image scale if not already set  
 ms.on 'marking-surface:add-tool', (tool) ->
-  @rescale() if @magnification is 0
+  @rescale() if @scaleX is 0
 
 LAST_TASK = false
 INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
