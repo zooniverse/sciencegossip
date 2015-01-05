@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "marking-surface": "0.6.4",
-    "zooniverse-readymade": "0.5.3"
+    "zooniverse-readymade": "0.5.6"
   },
   "scripts": {
     "start": "zooniverse-readymade serve --port 3050 --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
