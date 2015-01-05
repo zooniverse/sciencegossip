@@ -7,16 +7,50 @@ class DetailsTask extends DecisionTree.Task
     <div class='decision-tree-question'>#{@question}</div>
 
     <form class='decision-tree-choices'>
-      <label class='readymade-choice-label'>Type
-        <select name="type">
-          <option>Lithograph</option>
-          <option>Etching</option>
-          <option>Drawing</option>
-        </select>
-      </label>
-      <label class='readymade-choice-label'>Artist
-        <input type=text name=artist>
-      </label>
+      <fieldset>
+        <legend>Illustration</legend>
+        <label class='readymade-choice-label'>Type
+          <select name="type">
+            <option>drawing/painting/diagram</option>
+            <option>chart/table</option>
+            <option>photograph</option>
+            <option>bookplate</option>
+            <option>map</option>
+          </select>
+        </label>
+        <label class='readymade-choice-label'>Inscription
+          <textarea name=inscription></textarea>
+        </label>
+        <label class='readymade-choice-label'>Keywords
+          <textarea name=keywords></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Contributor</legend>
+        <label class='readymade-choice-label'>Name
+          <input type=text name=name>
+        </label>
+        <label class="readymade-choice-label">Role
+          <select name="role">
+            <option>illustrator</option>
+            <option>engraver</option>
+            <option>lithographer</option>
+            <option>printer</option>
+            <option>photographer</option>
+            <option>painter</option>
+            <option>other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Subject</legend>
+        <label class='readymade-choice-label'>Common name
+          <input type=text name=common>
+        </label>
+        <label class='readymade-choice-label'>Scientific name
+          <input type=text name=scientific>
+        </label>
+      </fieldset>
     </form>
 
     <div class='decision-tree-confirmation'>
