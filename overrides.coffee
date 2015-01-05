@@ -18,6 +18,15 @@ MARGIN = 25 # margin on cropped images
 
 current_tool = null
 
+bhl_link = document.createElement 'a'
+bhl_link.classList.add 'readymade-clickable'
+bhl_link.setAttribute 'href', ''
+bhl_link.setAttribute 'target', 'bhl'
+bhl_link.innerText = 'Read page on BHL'
+
+drawing_controls = document.querySelector '.drawing-controls'
+drawing_controls.appendChild bhl_link
+
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
@@ -64,3 +73,5 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.maxWidth = subjectViewer.maxWidth
   ms.maxHeight = subjectViewer.maxHeight
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+  
+  bhl_link.setAttribute 'href', subject.metadata.bhl_url

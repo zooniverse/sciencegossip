@@ -1,17 +1,21 @@
 [{
   "id": "BHL001",
   "zooniverse_id": "APK0000001",
-  "location": {"standard": "offline/magazineofnatura01loud_0049.jpg"}
+  "location": {"standard": "offline/magazineofnatura01loud_0049.jpg"},
+  "metadata": {"bhl_url": "http://biodiversitylibrary.org/page/2259128"}
 },{
   "id": "BHL002",
   "zooniverse_id": "APK0000002",
-  "location": {"standard": "offline/magazineofnatura01loud_0078.jpg"}
+  "location": {"standard": "offline/magazineofnatura01loud_0078.jpg"},
+  "metadata": {"bhl_url": "http://biodiversitylibrary.org/page/2259099"}
 },{
   "id": "BHL003",
   "zooniverse_id": "APK0000003",
-  "location": {"standard": "offline/intellectualobse1268lond_0278.jpg"}
+  "location": {"standard": "offline/intellectualobse1268lond_0278.jpg"},
+  "metadata": {"bhl_url": "http://biodiversitylibrary.org/page/39468864"}
 },{
   "id": "BHL004",
   "zooniverse_id": "APK0000004",
-  "location": {"standard": "offline/hardwickesscien281892cook_0073.jpg"}
+  "location": {"standard": "offline/hardwickesscien281892cook_0073.jpg"},
+  "metadata": {"bhl_url": "http://biodiversitylibrary.org/page/39681363"}
 }]
