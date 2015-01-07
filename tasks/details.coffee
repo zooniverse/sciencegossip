@@ -18,28 +18,8 @@ class DetailsTask extends DecisionTree.Task
             <option>map</option>
           </select>
         </label>
-        <label class='readymade-choice-label'>Inscription
-          <textarea name=inscription></textarea>
-        </label>
         <label class='readymade-choice-label'>Keywords
           <textarea name=keywords></textarea>
-        </label>
-      </fieldset>
-      <fieldset>
-        <legend>Contributor</legend>
-        <label class='readymade-choice-label'>Name
-          <input type=text name=name>
-        </label>
-        <label class="readymade-choice-label">Role
-          <select name="role">
-            <option selected>illustrator</option>
-            <option>engraver</option>
-            <option>lithographer</option>
-            <option>printer</option>
-            <option>photographer</option>
-            <option>painter</option>
-            <option>other</option>
-          </select>
         </label>
       </fieldset>
     </form>

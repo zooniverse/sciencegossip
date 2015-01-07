@@ -54,7 +54,7 @@ module.exports =
       next: 'parts'
     parts: 
       type: 'drawing'
-      question: 'Mark any species and inscriptions in the illustration.'
+      question: 'Mark any species, inscriptions and contributors in the illustration.'
       choices: [{
         type: Pinpoint
         label: 'Subject'
@@ -63,7 +63,7 @@ module.exports =
           type: 'text'
           key: 'common'
           choices:[{
-            value: 'text'
+            value: ''
             key: 'common'
             label: 'Common Name'
           }]
@@ -71,7 +71,7 @@ module.exports =
           type: 'text'
           key: 'scientific'
           choices:[{
-            value: 'text'
+            value: ''
             key: 'scientific'
             label: 'Scientific Name'
           }]
@@ -84,9 +84,39 @@ module.exports =
           type: 'text'
           key: 'inscription'
           choices:[{
-            value: 'text'
+            value: ''
             key: 'inscription'
             label: 'Inscription'
+          }]
+        }]
+      },{
+        type: Pinpoint
+        label: 'Contributor'
+        color: '#333'
+        details:[{
+          type: 'text'
+          key: 'name'
+          choices:[{
+            value: ''
+            key: 'name'
+            label: 'Name'
+          }]
+        },{
+          type: 'select'
+          key: 'role'
+          choices:[{
+            value: 'illustrator'
+            key: 'role'
+            label: 'Role'
+            options: [
+              'illustrator'
+              'engraver'
+              'lithographer'
+              'printer'
+              'photographer'
+              'painter'
+              'other'
+            ]
           }]
         }]
       }]
