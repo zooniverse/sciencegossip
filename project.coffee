@@ -61,16 +61,12 @@ module.exports =
         color: '#333'
         details:[{
           type: 'text'
-          key: 'common'
+          key: 'subject'
           choices:[{
             value: ''
             key: 'common'
             label: 'Common Name'
-          }]
-        },{
-          type: 'text'
-          key: 'scientific'
-          choices:[{
+          },{
             value: ''
             key: 'scientific'
             label: 'Scientific Name'
