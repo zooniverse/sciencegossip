@@ -6,6 +6,7 @@ class AccessibleControls extends ToolControls
     super
     
     @taskTypes.text = require '../tasks/text'
+    @taskTypes.select = require '../tasks/select'
     
     @tool.addEvent 'marking-surface:tool:select', @onToolSelect
     @tool.addEvent 'marking-surface:tool:deselect', @onToolDeselect
