@@ -11,7 +11,7 @@ class DetailsTask extends DecisionTree.Task
         <legend>Illustration</legend>
         <label class='readymade-choice-label'>Type
           <select name="type">
-            <option>drawing/painting/diagram</option>
+            <option selected>drawing/painting/diagram</option>
             <option>chart/table</option>
             <option>photograph</option>
             <option>bookplate</option>
@@ -32,7 +32,7 @@ class DetailsTask extends DecisionTree.Task
         </label>
         <label class="readymade-choice-label">Role
           <select name="role">
-            <option>illustrator</option>
+            <option selected>illustrator</option>
             <option>engraver</option>
             <option>lithographer</option>
             <option>printer</option>
@@ -40,15 +40,6 @@ class DetailsTask extends DecisionTree.Task
             <option>painter</option>
             <option>other</option>
           </select>
-        </label>
-      </fieldset>
-      <fieldset>
-        <legend>Subject</legend>
-        <label class='readymade-choice-label'>Common name
-          <input type=text name=common>
-        </label>
-        <label class='readymade-choice-label'>Scientific name
-          <input type=text name=scientific>
         </label>
       </fieldset>
     </form>

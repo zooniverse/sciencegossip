@@ -54,18 +54,39 @@ module.exports =
       next: 'parts'
     parts: 
       type: 'drawing'
-      question: 'Mark any parts of the illustration.'
+      question: 'Mark any species and inscriptions in the illustration.'
       choices: [{
         type: Pinpoint
-        label: 'Caption'
+        label: 'Subject'
         color: '#333'
         details:[{
           type: 'text'
-          key: 'parts'
+          key: 'common'
           choices:[{
             value: 'text'
-            key: 'caption'
-            label: 'Caption'
+            key: 'common'
+            label: 'Common Name'
+          }]
+        },{
+          type: 'text'
+          key: 'scientific'
+          choices:[{
+            value: 'text'
+            key: 'scientific'
+            label: 'Scientific Name'
+          }]
+        }]
+      },{
+        type: Pinpoint
+        label: 'Inscription'
+        color: '#333'
+        details:[{
+          type: 'text'
+          key: 'inscription'
+          choices:[{
+            value: 'text'
+            key: 'inscription'
+            label: 'Inscription'
           }]
         }]
       }]
