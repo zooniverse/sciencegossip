@@ -55,7 +55,7 @@ class DetailsTask extends DecisionTree.Task
   reset: (value) ->
     console.log 'reset' unless value?
     value ?=
-      details: [{name: 'type', value: 'Lithograph'}, {name: 'artist', value: ''}]
+      details: [{name: 'type', value: 'drawing/painting/diagram'}, {name: 'keywords', value: ''}]
     
     @form.find("[name=#{o.name}]").val(o.value) for o in value.details
     @value = value
