@@ -9,6 +9,9 @@ class DetailsTask extends DecisionTree.Task
     text: require './text'
     textarea: require './textarea'
   
+  defaults:
+    details: []
+  
   template: -> """
     <div class='decision-tree-question'>#{@question}</div>
 
@@ -51,8 +54,7 @@ class DetailsTask extends DecisionTree.Task
 
   reset: (value) ->
     console.log 'reset' unless value?
-    value ?=
-      details: [{name: 'type', value: 'drawing/painting/diagram'}, {name: 'keywords', value: ''}]
+    value ?= @defaults
     
     @form.find("[name=#{o.name}]").val(o.value) for o in value.details
     @value = value
@@ -63,6 +65,10 @@ class DetailsTask extends DecisionTree.Task
     task = new @taskTypes[choice.type]
     html = task.choiceTemplate choice, i
     fieldset.insertAdjacentHTML 'beforeend', html
+    
+    @defaults.details.push
+      name: choice.key
+      value: choice.value
     
     choice
 
