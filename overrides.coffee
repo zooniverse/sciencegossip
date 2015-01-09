@@ -75,3 +75,8 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', subject.metadata.bhl_url
+
+ms.on 'marking-surface:add-tool', (tool) ->
+  {label} = decisionTree.currentTask.getChoice() ? ''
+  legend = tool.controls.el.querySelector 'legend'
+  legend.innerText = label if legend?
