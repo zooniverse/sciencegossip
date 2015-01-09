@@ -1,6 +1,8 @@
 ToolControls = require 'zooniverse-readymade/lib/drawing-tools/tool-controls'
+{Task} = require 'zooniverse-decision-tree'
 
 class AccessibleControls extends ToolControls
+  template: require('../templates/tool-controls')()
   
   constructor: ->
     super
@@ -15,6 +17,7 @@ class AccessibleControls extends ToolControls
     dismiss_button = @el.querySelector 'button[name="readymade-dismiss-details"]'
     
     delete_button.setAttribute 'aria-label', 'Delete'
+    @addFieldset @label if @label?
     
     @addEvent 'keydown', 'button[name="readymade-destroy-drawing"]', (e) =>
       if @details? && e.which == 9 && e.shiftKey
@@ -31,5 +34,25 @@ class AccessibleControls extends ToolControls
     
   onToolDeselect: =>
     @current_focus.focus()
+    
+  addDetail: (detail) ->
+    if @label?
+      selector = 'fieldset'
+    else
+      selector = 'form'
+      
+    form = @el.querySelector selector
+
+    unless detail instanceof Task
+      detail = new @taskTypes[detail.type] detail
+    @detailTasks[detail.key] = detail
+    detail.renderTemplate()
+    detail.show()
+    form.appendChild detail.el
+  
+  addFieldset: (legend) ->
+    form = @el.querySelector 'form'
+    form.insertAdjacentHTML 'afterbegin', "<fieldset><legend>#{legend}</legend></fieldset>"
+    
   
 module.exports = AccessibleControls

@@ -100,8 +100,8 @@ module.exports =
           key: 'inscription'
           choices:[{
             value: ''
-            key: 'inscription'
-            label: 'Inscription'
+            key: 'text'
+            label: 'Text'
           }]
         }]
       },{
