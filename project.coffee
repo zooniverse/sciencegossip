@@ -51,6 +51,25 @@ module.exports =
     details:
       type: 'details'
       question: 'Add information about the illustrations.'
+      legend: 'Illustration'
+      choices: [{
+        type: 'select'
+        key: 'type'
+        label: 'Type'
+        value: 'drawing/painting/diagram'
+        options: [
+          'drawing/painting/diagram'
+          'chart/table'
+          'photograph'
+          'bookplate'
+          'map'
+        ]
+      },{
+        type: 'textarea'
+        key: 'keywords'
+        label: 'Keywords'
+        value: ''
+      }]
       next: 'parts'
     parts: 
       type: 'drawing'
