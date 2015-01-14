@@ -27,7 +27,6 @@ class DetailsTask extends DecisionTree.Task
   """
   
   enter: =>
-    console.log 'enter'
     super
   
   renderTemplate: =>
@@ -43,7 +42,6 @@ class DetailsTask extends DecisionTree.Task
     @next
   
   exit: ->
-    console.log 'exit'
     super
 
   getChoice: ->
@@ -53,7 +51,6 @@ class DetailsTask extends DecisionTree.Task
     @value
 
   reset: (value) ->
-    console.log 'reset' unless value?
     value ?= @defaults
     
     @form.find("[name=#{o.name}]").val(o.value) for o in value.details
