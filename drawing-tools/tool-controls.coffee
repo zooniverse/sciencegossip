@@ -8,6 +8,7 @@ class AccessibleControls extends ToolControls
     super
     
     @taskTypes.text = require '../tasks/text'
+    @taskTypes.textarea = require '../tasks/textarea'
     @taskTypes.select = require '../tasks/select'
     
     @tool.addEvent 'marking-surface:tool:select', @onToolSelect

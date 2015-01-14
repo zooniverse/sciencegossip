@@ -96,7 +96,7 @@ module.exports =
         label: 'Inscription'
         color: '#333'
         details:[{
-          type: 'text'
+          type: 'textarea'
           key: 'inscription'
           choices:[{
             value: ''
