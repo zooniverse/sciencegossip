@@ -5,7 +5,7 @@ Project = require 'zooniverse-readymade/lib/project'
 Project.prototype.addPage = (href, label, content) ->
     @stack.changeDisplay = false
     
-    frag_id = href.split('/').pop()
+    frag_id = href.replace(/\/:[^\/]+/g, '').split('/').pop()
     frag_id = 'home' if frag_id == ''
     
     if content instanceof StackOfPages
@@ -17,7 +17,7 @@ Project.prototype.addPage = (href, label, content) ->
     
     link = @header.addNavLink '#' + frag_id, label
     link.addEventListener 'click', (e) ->
-      window.location.hash = href
+      window.location.hash = href.replace(/\/:[^\/]+/g, '')
       e.preventDefault()
 
     page
