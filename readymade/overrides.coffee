@@ -1,42 +1,17 @@
 require './shims/classlist.js'
-require './project'
 require './marking-surface'
-require './site-header'
-team_page = require './team-page'
-      
-FieldGuide = require './field-guide/field-guide'
-MiniTutorial = require './tutorial/mini-tutorial'
 
 currentProject = require 'zooniverse-readymade/current-project'
 classify_page = currentProject.classifyPages[0]
 
 {header} = currentProject
 {decisionTree, subjectViewer} = classify_page
-
-# map element IDs to ARIA landmarks
-document.getElementById( id ).setAttribute( 'role', role ) for id, role of {
-  'main-header': 'banner'
-  'main-content': 'main'
-  'main-footer': 'contentinfo'
-  }
-
-# new field guide with keyboard a11y improvements
-field_guide = new FieldGuide 
-  examples: require './field-guide/examples'
-classify_page.fieldGuideContainer.append field_guide.el
-
-# new mini-tutorial with a11y improvements  
-classify_page.tutorial = new MiniTutorial
-  steps: require './tutorial/tutorial-steps'
-classify_page.el.append classify_page.tutorial.el
   
 classify_page.el.on 'activate-in-stack', ->
   if classify_page.tutorial.el.getAttribute('aria-hidden') is 'false'
     setTimeout => classify_page.tutorial.active_button?.focus()
 
-# new template for team page
-currentProject.addPage '#/team', 'Team', team_page
-
+console.log header
 # build tabbed main nav
 header.buildNav()
 

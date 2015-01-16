@@ -145,4 +145,8 @@ module.exports =
       }]
 
   firstTask: 'illustrations'
+  
+  examples: require './examples'
+
+  tutorialSteps: require './tutorial-steps'
 
