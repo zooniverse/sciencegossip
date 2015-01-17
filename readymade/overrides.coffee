@@ -11,16 +11,6 @@ classify_page.el.on 'activate-in-stack', ->
   if classify_page.tutorial.el.getAttribute('aria-hidden') is 'false'
     setTimeout => classify_page.tutorial.active_button?.focus()
 
-console.log header
-# build tabbed main nav
-header.buildNav()
-
-# add external links
-externalLinks =
-  Blog: 'http://blog.zooniverse.org'
-  Twitter: 'http://twitter.com/the_zooniverse'
-header.addNavLink href, title for title, href of externalLinks
-
 # focus management for the decision tree.
 decisionTree.autofocus = false
 
