@@ -97,7 +97,6 @@ module.exports =
           'drawing/painting/diagram'
           'chart/table'
           'photograph'
-          'bookplate'
           'map'
         ]
       },{
@@ -112,7 +111,7 @@ module.exports =
       question: 'Mark any species, inscriptions and contributors in the illustration.'
       choices: [{
         type: Pinpoint
-        label: 'Subject'
+        label: 'Species'
         color: '#333'
         details:[{
           type: 'text'
