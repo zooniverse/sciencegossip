@@ -33,8 +33,37 @@
       display: block
   
   .decision-tree
+  .readymade-classification-summary
     padding: .5em
     border-radius: .5em
     background: #333
     background: rgba(0, 0, 0, 0.5)
+  
+  .readymade-subject-viewer
+    display: flex
+    
+    .drawing-controls
+      flex: 1
+      position: fixed
+      left: 0
+      z-index: 10
+      
+      .readymade-clickable
+        display: block
+        color: #fff
+        background: #000
+        background: rgba( 0, 0, 0, .5)
+        margin: .2em .5em
+        padding: .5em
+        text-align: center
+        font-size: 1em
+    
+    .readymade-marking-surface-container
+      flex: 6
+  
+  .readymade-decision-tree-container
+  .readymade-summary-container
+    position: fixed
+    right: 1em
+    max-width: 15%
 
