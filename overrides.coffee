@@ -1,5 +1,9 @@
 require './readymade/overrides.coffee'
 
+SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
+
+SubjectViewer::template = require './templates/subject-viewer'
+
 currentProject = require 'zooniverse-readymade/current-project'
 classify_page = currentProject.classifyPages[0]
 
