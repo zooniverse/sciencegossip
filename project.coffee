@@ -1,6 +1,9 @@
 Rectangle = require './drawing-tools/rectangle'
 Pinpoint = require './drawing-tools/pinpoint'
 Details = require './tasks/details'
+GroupsPage = require './groups'
+
+group_page = new GroupsPage
 
 module.exports =
   id: 'bhl'
@@ -15,6 +18,8 @@ module.exports =
   
 
   pages: [{
+      'Periodicals': group_page.el[0].innerHTML
+    },{
     'About': '''
       <h2>About ‘Illustrated Life’</h2>
 
