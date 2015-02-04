@@ -4,7 +4,14 @@ Group = require 'zooniverse/models/project-group'
 
 class GroupsPage extends Controller
   
-  template: '<div>Hello!</div>'
+  template: (context) -> "
+    <h2>Periodicals</h2>
+    #{(for group in context.groups
+      "<p>#{group.name}</p>"
+    ).join '\n'}
+  "
+  
+  groups: []
   
   constructor: ->
     super
@@ -12,8 +19,8 @@ class GroupsPage extends Controller
     @listenTo Api, 'ready', (e) =>
       Group.fetch()
     
-    @listenTo Group, 'fetch', (e, groups) =>
-      console.log groups
+    @listenTo Group, 'fetch', (e, @groups) =>
+      $('#periodicals').html @template @
   
   listenTo: (thing, eventName, handler) ->
     addEvent = if 'on' of thing then 'on' else 'addEventListener'
