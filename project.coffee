@@ -18,7 +18,7 @@ module.exports =
   
 
   pages: [{
-      'Periodicals': group_page.el[0].innerHTML
+      'Periodicals': group_page
     },{
     'About': '''
       <h2>About ‘Illustrated Life’</h2>

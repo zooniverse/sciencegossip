@@ -20,7 +20,7 @@ class GroupsPage extends Controller
       Group.fetch()
     
     @listenTo Group, 'fetch', (e, @groups) =>
-      $('#periodicals').html @template @
+      @el.html @template @
   
   listenTo: (thing, eventName, handler) ->
     addEvent = if 'on' of thing then 'on' else 'addEventListener'
