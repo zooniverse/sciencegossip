@@ -88,10 +88,10 @@ module.exports =
         label: 'Mark the illustrations'
         color: '#333333'
       }]
-      next: 'details'
+      next: 'parts'
     details:
       type: 'details'
-      question: 'Add information about the illustrations.'
+      question: 'Add information about the illustration.'
       legend: 'Illustration'
       choices: [{
         type: 'select'
@@ -110,7 +110,7 @@ module.exports =
         label: 'Keywords'
         value: ''
       }]
-      next: 'parts'
+      next: 'details'
     parts: 
       type: 'drawing'
       question: 'Mark any species, inscriptions and contributors in the illustration.'

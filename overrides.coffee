@@ -60,12 +60,12 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     task.reset if current_tool.mark.details?
       details: current_tool.mark.details
   
-  if task.key is 'parts'
+  if task.key is 'details'
     LAST_TASK = rect_index == rectangles.length - 1
     if LAST_TASK
       task.next = 'review'
     else
-      task.next = 'details'
+      task.next = 'parts'
   
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
