@@ -4,6 +4,10 @@ SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 
 SubjectViewer::template = require './templates/subject-viewer'
 
+ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
+
+ClassifyPage::template = require './templates/classify-page'
+
 currentProject = require 'zooniverse-readymade/current-project'
 classify_page = currentProject.classifyPages[0]
 

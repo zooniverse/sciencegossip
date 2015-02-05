@@ -1,3 +1,14 @@
+#_RESET_BUTTON
+  background: transparent
+  border: 0
+  color: inherit
+  cursor: pointer
+  font: inherit
+  line-height: inherit
+  margin: 0
+  padding: 0
+  text-shadow: inherit
+
 #readymade
   
   // @import './readymade/readymade.styl'
@@ -41,31 +52,29 @@
     border-radius: .5em
     background: #333
     background: rgba(0, 0, 0, 0.5)
-  
-  .readymade-subject-viewer
-    display: flex
     
-    .drawing-controls
-      flex: 1
-      position: fixed
-      left: 0
-      z-index: 10
-      
-      .readymade-clickable
-        display: block
-        color: #fff
-        background: #000
-        background: rgba( 0, 0, 0, .5)
-        margin: .2em .5em
-        padding: .5em
-        text-align: center
-        font-size: 1em
+  .drawing-controls
+    margin-left: 1em
+    
+    .readymade-clickable
+      display: block
+      color: #fff
+      background: #000
+      background: rgba( 0, 0, 0, .5)
+      margin: .2em .5em
+      padding: .5em
+      text-align: center
+      font-size: 1em
+      border-radius: .5em
+    
+    button
+      @extends #_RESET_BUTTON
+      width: 100%
     
     .readymade-marking-surface-container
       flex: 6
   
-  .readymade-decision-tree-container
-  .readymade-summary-container
+  .fixed-panel
     position: fixed
     right: 1em
     max-width: 15%
