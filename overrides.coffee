@@ -49,15 +49,15 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rect_index = parseInt (subjectViewer.taskIndex - INITIAL_STEPS) / ANNOTATION_STEPS
   
   if task.key in ['illustration', 'review']
-    subjectViewer.rescale()
+    ms.svg.attr
+      width: subjectViewer.maxWidth
+      height: subjectViewer.maxHeight
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
     current_tool = rectangles[rect_index]
     w = current_tool.mark.width + MARGIN * 2
     h = current_tool.mark.height + MARGIN * 2
-    ms.svg.attr 'width', w
-    ms.svg.attr 'height', h
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
   
   if task.key is 'details'
@@ -80,6 +80,9 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.maxWidth = subjectViewer.maxWidth
   ms.maxHeight = subjectViewer.maxHeight
+  ms.svg.attr
+    width: subjectViewer.maxWidth
+    height: subjectViewer.maxHeight
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', subject.metadata.bhl_url
