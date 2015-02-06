@@ -9,7 +9,6 @@ module.exports =
   id: 'bhl'
   background: 'background.jpg'
 
-  producer: 'Missouri Botanical Garden & Zooniverse'
   title: 'Illustrated Life'
   summary: 'Help catalogue scientific illustrations'
   description: '''
