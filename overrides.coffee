@@ -38,6 +38,8 @@ drawing_controls.appendChild bhl_link
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
+  scale = ms.el.parentNode.offsetWidth / subjectViewer.maxWidth
+  
   for tool in ms.tools
     tool.deselect()
     tool.disable()
@@ -50,8 +52,8 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   
   if task.key in ['illustration', 'review']
     ms.svg.attr
-      width: subjectViewer.maxWidth
-      height: subjectViewer.maxHeight
+      width: scale * subjectViewer.maxWidth
+      height: scale * subjectViewer.maxHeight
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
@@ -78,11 +80,12 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     current_tool.mark.details = value.details
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
+  scale = ms.el.parentNode.offsetWidth / subjectViewer.maxWidth
   ms.maxWidth = subjectViewer.maxWidth
   ms.maxHeight = subjectViewer.maxHeight
   ms.svg.attr
-    width: subjectViewer.maxWidth
-    height: subjectViewer.maxHeight
+    width: scale * subjectViewer.maxWidth
+    height: scale * subjectViewer.maxHeight
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', subject.metadata.bhl_url
