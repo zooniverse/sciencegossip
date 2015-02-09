@@ -26,6 +26,20 @@ module.exports = -> """
             <span>#{translate 'readymade.restartTutorial'}</span>
           </span>
         </button>
+        
+        <label class="readymade-has-clickable">
+          <input type="checkbox" name="pagezoom" />
+          <span class="readymade-clickable">
+            <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
+            <i class="fa fa-search-plus readymade-clickable-checked" style="color: orangered;"></i>
+            <span>Toggle full page</span>
+          </span>
+        </label>
+        
+        <a href="" target="bhl" class="readymade-clickable">
+          <span class="fa fa-file"></span>
+          Original page
+        </a>
       </div>
     </div>
   </div>

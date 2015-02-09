@@ -36,6 +36,7 @@ current_tool = null
 rect_index = 0
 
 bhl_link = document.querySelector('a[target=bhl]')
+page_zoom = document.querySelector('input[name=pagezoom]')
 
 drawing_controls = document.querySelector '.drawing-controls'
 drawing_controls.appendChild bhl_link
@@ -43,6 +44,7 @@ drawing_controls.appendChild bhl_link
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
+  page_zoom.disabled = true
   
   for tool in ms.tools
     tool.deselect()
@@ -59,6 +61,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
+    page_zoom.disabled = false
     current_tool = rectangles[rect_index]
     w = current_tool.mark.width + MARGIN * 2
     h = current_tool.mark.height + MARGIN * 2
@@ -76,7 +79,8 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
       task.next = 'parts'
 
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
-  task.reset 'yes' if task.key is 'illustrations'  
+  task.reset 'yes' if task.key is 'illustrations'
+  page_zoom.checked = false
 
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
@@ -99,3 +103,13 @@ ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
   legend = tool.controls.el.querySelector 'legend'
   legend.innerText = label if legend?
+
+page_zoom.addEventListener 'change', (e) ->
+  return unless current_tool?
+  if @.checked
+    ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+  else
+    w = current_tool.mark.width + MARGIN * 2
+    h = current_tool.mark.height + MARGIN * 2
+    ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
+    
