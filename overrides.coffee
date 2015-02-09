@@ -69,7 +69,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
   
   if task.key is 'details'
-    value = decisionTree.valueChain[subjectViewer.taskIndex]
+    value = current_tool.mark.details
     task.reset value if value?
   
   if task.key is 'details'
