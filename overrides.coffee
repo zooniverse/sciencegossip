@@ -72,7 +72,10 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
       task.next = 'review'
     else
       task.next = 'parts'
-  
+
+classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+  task.reset 'yes' if task.key is 'illustrations'  
+
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
   
