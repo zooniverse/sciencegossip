@@ -9,8 +9,7 @@ class DetailsTask extends DecisionTree.Task
     text: require './text'
     textarea: require './textarea'
   
-  defaults:
-    details: []
+  defaults: {}
   
   template: -> """
     <div class='decision-tree-question'>#{@question}</div>
@@ -35,8 +34,8 @@ class DetailsTask extends DecisionTree.Task
     @addChoiceTask choice, i for choice, i in @choices
     
     @form = $(@el).find 'form'
-    if @value?
-      @form.find("[name=#{o.name}]").val(o.value) for o in @value.details
+    if @defaults?
+      @form.find("[name=#{key}]").val(value) for key, value of @defaults
 
   getNext: =>
     @next
@@ -47,14 +46,17 @@ class DetailsTask extends DecisionTree.Task
   getChoice: ->
 
   getValue: ->
-    @value.details = @form.serializeArray()
-    @value
+    form = @form.serializeArray()
+    value = {}
+    
+    value[o.name] = o.value for o in form
+    
+    value
 
   reset: (value) ->
     value ?= @defaults
     
-    @form.find("[name=#{o.name}]").val(o.value) for o in value.details
-    @value = value
+    @form.find("[name=#{k}]").val(v) for k, v of value
   
   addChoiceTask: (choice, i) ->
     fieldset = @el.querySelector 'fieldset'
@@ -63,9 +65,7 @@ class DetailsTask extends DecisionTree.Task
     html = task.choiceTemplate choice, i
     fieldset.insertAdjacentHTML 'beforeend', html
     
-    @defaults.details.push
-      name: choice.key
-      value: choice.value
+    @defaults[choice.key] = choice.value
     
     choice
 
