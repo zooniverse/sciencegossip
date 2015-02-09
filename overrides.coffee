@@ -4,6 +4,14 @@ SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 
 SubjectViewer::template = require './templates/subject-viewer'
 
+SubjectViewer::rescale = ()->
+  scale = @markingSurface.el.parentNode.offsetWidth / @maxWidth
+  @markingSurface.maxWidth = @maxWidth
+  @markingSurface.maxHeight = @maxHeight
+  @markingSurface.svg.attr
+    width: scale * @maxWidth
+    height: scale * @maxHeight
+
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 
 ClassifyPage::template = require './templates/classify-page'
@@ -38,7 +46,6 @@ drawing_controls.appendChild bhl_link
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
-  scale = ms.el.parentNode.offsetWidth / subjectViewer.maxWidth
   
   for tool in ms.tools
     tool.deselect()
@@ -51,9 +58,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rect_index = parseInt (subjectViewer.taskIndex - INITIAL_STEPS) / ANNOTATION_STEPS
   
   if task.key in ['illustration', 'review']
-    ms.svg.attr
-      width: scale * subjectViewer.maxWidth
-      height: scale * subjectViewer.maxHeight
+    subjectViewer.rescale()
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
@@ -89,12 +94,6 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     current_tool.mark.details = value.details
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
-  scale = ms.el.parentNode.offsetWidth / subjectViewer.maxWidth
-  ms.maxWidth = subjectViewer.maxWidth
-  ms.maxHeight = subjectViewer.maxHeight
-  ms.svg.attr
-    width: scale * subjectViewer.maxWidth
-    height: scale * subjectViewer.maxHeight
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', subject.metadata.bhl_url
