@@ -35,11 +35,7 @@ MARGIN = 25 # margin on cropped images
 current_tool = null
 rect_index = 0
 
-bhl_link = document.createElement 'a'
-bhl_link.classList.add 'readymade-clickable'
-bhl_link.setAttribute 'href', ''
-bhl_link.setAttribute 'target', 'bhl'
-bhl_link.innerHTML = '<span class="fa fa-file"></span> Original page'
+bhl_link = document.querySelector('a[target=bhl]')
 
 drawing_controls = document.querySelector '.drawing-controls'
 drawing_controls.appendChild bhl_link
