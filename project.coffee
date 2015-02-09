@@ -117,6 +117,7 @@ module.exports =
         type: Pinpoint
         label: 'Species'
         color: '#333'
+        checked: true
         details:[{
           type: 'text'
           key: 'subject'
