@@ -78,6 +78,12 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
 
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
+
+  if decisionTree.currentTask.getNext()
+    label = 'OK'
+  else
+    label = 'Finish'
+  decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
   if key is 'details'
     current_tool.mark.details = value.details
