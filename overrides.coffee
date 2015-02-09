@@ -91,8 +91,8 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     label = 'Finish'
   decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
-  if key is 'details'
-    current_tool.mark.details = value
+  current_tool.mark.details = value if key is 'details'
+  current_tool.mark.parts = value if key is 'parts'
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
