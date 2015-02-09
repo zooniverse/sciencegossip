@@ -33,6 +33,7 @@ ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
 MARGIN = 25 # margin on cropped images
 
 current_tool = null
+rect_index = 0
 
 bhl_link = document.createElement 'a'
 bhl_link.classList.add 'readymade-clickable'
@@ -68,8 +69,8 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
   
   if task.key is 'details'
-    task.reset if current_tool.mark.details?
-      details: current_tool.mark.details
+    value = decisionTree.valueChain[subjectViewer.taskIndex]
+    task.reset value if value?
   
   if task.key is 'details'
     LAST_TASK = rect_index == rectangles.length - 1
@@ -91,7 +92,7 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
   if key is 'details'
-    current_tool.mark.details = value.details
+    current_tool.mark.details = value
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
