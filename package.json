@@ -8,6 +8,6 @@
   "scripts": {
     "start": "zooniverse-readymade serve --port 3050 --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
     "build": "zooniverse-readymade build --output ./build --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
-    "demo": "npm run build && publisssh ./build demo.zooniverse.org/bhl && rm -rf ./build"
+    "stage": "npm run build && publisssh ./build demo.zooniverse.org/bhl && rm -rf ./build"
   }
 }
