@@ -38,9 +38,6 @@ rect_index = 0
 bhl_link = document.querySelector('a[target=bhl]')
 page_zoom = document.querySelector('input[name=pagezoom]')
 
-drawing_controls = document.querySelector '.drawing-controls'
-drawing_controls.appendChild bhl_link
-
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   rectangles = []
