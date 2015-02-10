@@ -9,10 +9,10 @@ module.exports =
   id: 'bhl'
   background: 'background.jpg'
 
-  title: 'Illustrated Life'
-  summary: 'Help catalogue scientific illustrations'
+  title: 'Science Gossip'
+  summary: 'Uncover the history of citizen science'
   description: '''
-                 Illustrations are an essential part of visualising and understanding the natural world. We need your help to identify and classify the range of illustrations printed in books and periodicals over the last 200 years.
+                 In the Victorian period, just like today, scientists and members of the public worked together to further scientific discovery. Before computers and cameras they had to draw what they saw. Their drawings are locked away in the pages of Victorian periodicals, such as <cite>Science Gossip</cite>, <cite>Recreative Science</cite> and <cite>The Intellectual Observer</cite>. Help us to classify their drawings and map the origins of citizen science.
                  '''
   
 
