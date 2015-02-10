@@ -27,7 +27,7 @@ ms = subjectViewer.markingSurface
 ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @scaleX is 0
 
-LAST_TASK = false
+LAST_TASK = true
 INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
 ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
 MARGIN = 25 # margin on cropped images
@@ -60,16 +60,16 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   if task.key in ['details', 'parts'] and rectangles.length > 0
     page_zoom.disabled = false
     current_tool = rectangles[rect_index]
-    w = current_tool.mark.width + MARGIN * 2
-    h = current_tool.mark.height + MARGIN * 2
-    ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
+    w = current_tool?.mark.width + MARGIN * 2
+    h = current_tool?.mark.height + MARGIN * 2
+    ms.rescale current_tool?.mark.left - MARGIN, current_tool?.mark.top - MARGIN, w, h
   
   if task.key is 'details'
-    value = current_tool.mark.details
+    value = current_tool?.mark.details
     task.reset value if value?
   
   if task.key is 'details'
-    LAST_TASK = rect_index == rectangles.length - 1
+    LAST_TASK = rect_index == rectangles.length - 1 if rectangles.length
     if LAST_TASK
       task.next = 'review'
     else
@@ -88,8 +88,8 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     label = 'Finish'
   decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
-  current_tool.mark.details = value if key is 'details'
-  current_tool.mark.parts = value if key is 'parts'
+  current_tool?.mark.details = value if key is 'details'
+  current_tool?.mark.parts = value if key is 'parts'
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
