@@ -20,7 +20,7 @@ module.exports =
       'Periodicals': group_page
     },{
     'About': '''
-      <h2>About ‘Illustrated Life’</h2>
+      <h2>About ‘Science Gossip’</h2>
 
       <p>The publication of books and periodicals are key locations for visualizing knowledge about the natural world. The Biodiversity Heritage Library has digitized and catalogued millions of pages of printed text between the 1400's and today related to the investigation of the natural world. Illustrations are a large part of these printed pages, and we need your to help identify, classify and correlate them. The data you create by tagging illustrations and adding artist and engraver information will have a direct impact on the research of historians who are trying to figure out why, how often, and who made images depicting a whole range of natural sciences in the Victorian period.</p> 
 
