@@ -95,6 +95,7 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', subject.metadata.bhl_url
+  current_tool = null
 
 ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
