@@ -1,3 +1,5 @@
+MAX_PAGE_WIDTH = 600
+
 require './readymade/overrides.coffee'
 
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
@@ -5,7 +7,8 @@ SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 SubjectViewer::template = require './templates/subject-viewer'
 
 SubjectViewer::rescale = ()->
-  scale = @markingSurface.el.parentNode.offsetWidth / @maxWidth
+  width = Math.min MAX_PAGE_WIDTH, @markingSurface.el.parentNode.offsetWidth
+  scale = width / @maxWidth
   @markingSurface.maxWidth = @maxWidth
   @markingSurface.maxHeight = @maxHeight
   @markingSurface.svg.attr
