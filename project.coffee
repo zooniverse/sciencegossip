@@ -170,7 +170,7 @@ module.exports =
               'lithographer'
               'printer'
               'photographer'
-              'painter'
+              'artist'
               'other'
             ]
           }]
