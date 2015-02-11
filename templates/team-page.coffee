@@ -8,7 +8,7 @@ module.exports = (context) ->
           " else if group is 'scientists' then "
             Researchers
           " else if group is 'developers' then "
-            Developers
+            Zooniverse
           " else ''}
         </h2>
 

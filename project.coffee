@@ -35,8 +35,18 @@ team =
     image: '//placehold.it/100.png?text=Example'
     name: 'Jim O\'Donnell'
     location: 'Oxford, UK'
-    description: 'Web Developer'
+    description: 'Web developer'
     url: 'http://twitter.com/pekingspring'
+  },{
+    image: '//placehold.it/100.png?text=Example'
+    name: 'Victoria Van Hyning'
+    location: 'Oxford, UK'
+    description: 'Humanities project lead'
+  },{
+    image: '//placehold.it/100.png?text=Example'
+    name: 'Adam McMaster'
+    location: 'Oxford, UK'
+    description: 'Web infrastructure'
   }]
 
 module.exports =
