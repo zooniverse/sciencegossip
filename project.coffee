@@ -29,8 +29,23 @@ team =
     title: "Researchers"
     members: [{
       image: '//placehold.it/100.png?text=Example'
+      name: 'Trish Rose-Sandler'
+      location: 'St Louis, MO, USA'
+      description: 'Missouri Botanical Garden'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'William Ulate'
+      location: 'St Louis, MO, USA'
+      description: 'Missouri Botanical Garden'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Mike Lichtenberg'
+      location: 'St Louis, MO, USA'
+      description: 'Missouri Botanical Garden'
+    },{
+      image: '//placehold.it/100.png?text=Example'
       name: 'Geoffrey Belknap'
-      location: 'Leicester, U.K.'
+      location: 'Leicester, UK'
       description: 'Postdoctoral researcher, Constructing Scientific Communities'
       url: 'http://twitter.com/geoffreybelknap'
     }]
