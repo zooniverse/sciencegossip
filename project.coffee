@@ -64,6 +64,7 @@ module.exports =
   }]
   
   externalLinks:
+    Talk: 'http://talk.penguinwatch.org'
     Blog: 'http://blog.zooniverse.org'
     Twitter: 'http://twitter.com/the_zooniverse'
 
