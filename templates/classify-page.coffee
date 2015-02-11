@@ -8,18 +8,7 @@ module.exports = -> """
     </div>
     <div class="readymade-subject-viewer-container"></div>
     <div class="fixed-panel">
-      <div class="readymade-decision-tree-container"></div>
-      <div class="readymade-summary-container" style="display: none;"></div>
       <div class="drawing-controls">
-        <label class="readymade-has-clickable">
-          <input type="checkbox" name="favorite" />
-          <span class="readymade-clickable">
-            #{translate 'readymade.favoriteIcon'}
-            #{translate 'readymade.favoriteIconChecked'}
-            <span>#{translate 'readymade.favorite'}</span>
-          </span>
-        </label>
-
         <button name="restart-tutorial">
           <span class="readymade-clickable">
             #{translate 'readymade.tutorialIcon'}
@@ -35,13 +24,25 @@ module.exports = -> """
             <span>Help</span>
           </span>
         </label>
-        
+      </div>
+      <div class="readymade-decision-tree-container"></div>
+      <div class="readymade-summary-container" style="display: none;"></div>
+      <div class="drawing-controls">
         <label class="readymade-has-clickable">
           <input type="checkbox" name="pagezoom" />
           <span class="readymade-clickable">
             <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
             <i class="fa fa-search-plus readymade-clickable-checked" style="color: orangered;"></i>
             <span>Toggle full page</span>
+          </span>
+        </label>
+        
+        <label class="readymade-has-clickable">
+          <input type="checkbox" name="favorite" />
+          <span class="readymade-clickable">
+            #{translate 'readymade.favoriteIcon'}
+            #{translate 'readymade.favoriteIconChecked'}
+            <span>#{translate 'readymade.favorite'}</span>
           </span>
         </label>
         
