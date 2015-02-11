@@ -62,13 +62,16 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   if task.key in ['illustration', 'review']
     subjectViewer.rescale()
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+    current_tool?.el.classList.remove 'selected'
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
     page_zoom.disabled = false
+    current_tool?.el.classList.remove 'selected'
     current_tool = rectangles[rect_index]
     w = current_tool?.mark.width + MARGIN * 2
     h = current_tool?.mark.height + MARGIN * 2
     ms.rescale current_tool?.mark.left - MARGIN, current_tool?.mark.top - MARGIN, w, h
+    current_tool?.el.classList.add 'selected'
   
   if task.key is 'details'
     value = current_tool?.mark.details
