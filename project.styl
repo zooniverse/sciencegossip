@@ -53,7 +53,51 @@
     border-radius: .5em
     background: #333
     background: rgba(0, 0, 0, 0.5)
+  
+  .readymade-field-guide-container
+    position: absolute
+    top: 6em
+    left: 1em
+    flex: 2
+    min-width: 25%
+    max-width: 400px
     
+  .readymade-field-guide
+    padding: .5em
+    border-radius: .5em
+    background: #333
+    background: rgba(0, 0, 0, 0.8)
+    color: white
+    
+    .readymade-field-guide-pages
+      background: transparent
+      color: white
+      
+      img
+        width: 150px
+        height: 200px
+      ul
+        margin: auto 0
+        text-indent: 0
+        padding: 0
+        list-style-type: none
+      
+    [role=tab]
+      background: transparent
+      color: white
+      opacity: 0.5
+      
+      &[aria-selected=true]
+        opacity: 1
+      
+    .readymade-field-guide-examples
+      display: flex
+      flex-direction: column
+    
+    .readymade-field-guide-example:not(:first-child)
+      margin-left: 0
+      margin-top: 1vw
+      
   .drawing-controls
     margin-left: 1em
     
@@ -79,7 +123,6 @@
     flex: 6
   
   .readymade-subject-viewer-container
-  .readymade-field-guide-container
     max-width: 85%
   
   .fixed-panel

@@ -1,5 +1,9 @@
 module.exports = [{
     label: 'Type'
+    content: '''
+                 We're only looking for certain types of illustrations.
+                 '''
+    
     figures: [{
       label: 'Drawing/painting/diagram'
       image: ""
