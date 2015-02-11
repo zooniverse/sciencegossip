@@ -1,19 +1,13 @@
 module.exports = (context) ->
   template = -> "
     <div class='readymade-team-page'>
-      #{(for group in ['organizations', 'scientists', 'developers'] when @[group]? then "
+      #{(for key, group of @ then "
         <h2 class='readymade-team-group-title'>
-          #{if group is 'organizations' then "
-            Organizations
-          " else if group is 'scientists' then "
-            Researchers
-          " else if group is 'developers' then "
-            Zooniverse
-          " else ''}
+          #{group.title}
         </h2>
 
-        <div class='readymade-#{group} readymade-team-group'>
-          #{(for member, i in @[group] then "
+        <div class='readymade-#{key} readymade-team-group'>
+          #{(for member, i in group.members then "
             <div class='readymade-team-member'>
               #{if member.image? then "
                 <div class='readymade-team-member-photo'><img src='#{member.image}' /></div>

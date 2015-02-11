@@ -7,47 +7,53 @@ group_page = new GroupsPage
 teampage = require './templates/team-page'
 
 team =
-  organizations: [{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Missouri Botanical Garden'
-    description: 'description'
-  },{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Constructing Scientific Communities'
-    description: 'AHRC research project'
-    url: ['http://conscicom.org/', 'https://twitter.com/conscicom']
-  },{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Zooniverse'
-    description: 'Citizen Science Platform'
-    url: ['https://www.zooniverse.org/', 'https://twitter.com/the_zooniverse', 'https://github.com/zooniverse']
-  }]
+  organizations: 
+    title: "Partners"
+    members: [{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Missouri Botanical Garden'
+      description: 'description'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Constructing Scientific Communities'
+      description: 'AHRC research project'
+      url: ['http://conscicom.org/', 'https://twitter.com/conscicom']
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Zooniverse'
+      description: 'Citizen Science Platform'
+      url: ['https://www.zooniverse.org/', 'https://twitter.com/the_zooniverse', 'https://github.com/zooniverse']
+    }]
 
-  scientists: [{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Geoffrey Belknap'
-    location: 'Leicester, U.K.'
-    description: 'Postdoctoral researcher, Constructing Scientific Communities'
-    url: 'http://twitter.com/geoffreybelknap'
-  }]
+  scientists: 
+    title: "Researchers"
+    members: [{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Geoffrey Belknap'
+      location: 'Leicester, U.K.'
+      description: 'Postdoctoral researcher, Constructing Scientific Communities'
+      url: 'http://twitter.com/geoffreybelknap'
+    }]
 
-  developers: [{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Jim O\'Donnell'
-    location: 'Oxford, UK'
-    description: 'Web developer'
-    url: 'http://twitter.com/pekingspring'
-  },{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Victoria Van Hyning'
-    location: 'Oxford, UK'
-    description: 'Humanities project lead'
-  },{
-    image: '//placehold.it/100.png?text=Example'
-    name: 'Adam McMaster'
-    location: 'Oxford, UK'
-    description: 'Web infrastructure'
-  }]
+  developers: 
+    title: "Zooniverse"
+    members: [{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Jim O\'Donnell'
+      location: 'Oxford, UK'
+      description: 'Web developer'
+      url: 'http://twitter.com/pekingspring'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Victoria Van Hyning'
+      location: 'Oxford, UK'
+      description: 'Humanities project lead'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Adam McMaster'
+      location: 'Oxford, UK'
+      description: 'Web infrastructure'
+    }]
 
 module.exports =
   id: 'bhl'
