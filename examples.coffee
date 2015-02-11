@@ -39,7 +39,9 @@ module.exports = [{
       alt: "Species example"
       label: '''
                    <p>Species</p>
-                   <p>Common Name=Ostrich Scientific Name=Struthio camelus</p>
+                   <p>Common Name=Ostrich
+                   <br>
+                   Scientific Name=Struthio camelus</p>
                    '''
       
       },{
