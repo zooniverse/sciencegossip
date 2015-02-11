@@ -25,8 +25,8 @@ team =
       url: ['https://www.zooniverse.org/', 'https://twitter.com/the_zooniverse', 'https://github.com/zooniverse']
     }]
 
-  scientists: 
-    title: "Researchers"
+  missouri: 
+    title: "Missouri Botanical Garden"
     members: [{
       image: '//placehold.it/100.png?text=Example'
       name: 'Trish Rose-Sandler'
@@ -42,6 +42,20 @@ team =
       name: 'Mike Lichtenberg'
       location: 'St Louis, MO, USA'
       description: 'Missouri Botanical Garden'
+    }]
+  
+  conscicom: 
+    title: "Constructing Scientific Communities"
+    members: [{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Sally Shuttleworth'
+      location: 'Oxford, UK'
+      description: 'Principle Investigator'
+    },{
+      image: '//placehold.it/100.png?text=Example'
+      name: 'Chris Lintott'
+      location: 'Oxford, UK'
+      description: 'Co-investigator'
     },{
       image: '//placehold.it/100.png?text=Example'
       name: 'Geoffrey Belknap'
