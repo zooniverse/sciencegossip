@@ -28,6 +28,15 @@ module.exports = -> """
         </button>
         
         <label class="readymade-has-clickable">
+          <input type="checkbox" name="help" />
+          <span class="readymade-clickable">
+            <i class="fa fa-question readymade-clickable-not-checked"></i>
+            <i class="fa fa-question readymade-clickable-checked" style="color: orangered;"></i>
+            <span>Help</span>
+          </span>
+        </label>
+        
+        <label class="readymade-has-clickable">
           <input type="checkbox" name="pagezoom" />
           <span class="readymade-clickable">
             <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
@@ -43,5 +52,5 @@ module.exports = -> """
       </div>
     </div>
   </div>
-  <div class="readymade-field-guide-container"></div>
+  <div class="readymade-field-guide-container" aria-hidden="false"></div>
 """

@@ -60,7 +60,11 @@
     left: 1em
     flex: 2
     min-width: 25%
-    max-width: 400px
+    width: 400px
+    transition: left 1s
+    
+    &[aria-hidden=true]
+      left: -100em
     
   .readymade-field-guide
     padding: .5em

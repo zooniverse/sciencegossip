@@ -37,6 +37,9 @@ rect_index = 0
 
 bhl_link = document.querySelector('a[target=bhl]')
 page_zoom = document.querySelector('input[name=pagezoom]')
+help = document.querySelector('input[name=help]')
+
+classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
 
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
@@ -110,4 +113,7 @@ page_zoom.addEventListener 'change', (e) ->
     w = current_tool.mark.width + MARGIN * 2
     h = current_tool.mark.height + MARGIN * 2
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
+
+help.addEventListener 'change', (e) ->
+  classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
     
