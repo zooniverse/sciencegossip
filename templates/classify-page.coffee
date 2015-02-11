@@ -24,10 +24,7 @@ module.exports = -> """
             <span>Help</span>
           </span>
         </label>
-      </div>
-      <div class="readymade-decision-tree-container"></div>
-      <div class="readymade-summary-container" style="display: none;"></div>
-      <div class="drawing-controls">
+        
         <label class="readymade-has-clickable">
           <input type="checkbox" name="pagezoom" />
           <span class="readymade-clickable">
@@ -51,6 +48,8 @@ module.exports = -> """
           Original page
         </a>
       </div>
+      <div class="readymade-decision-tree-container"></div>
+      <div class="readymade-summary-container" style="display: none;"></div>
     </div>
   </div>
   <div class="readymade-field-guide-container" aria-hidden="false"></div>
