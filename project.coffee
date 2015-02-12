@@ -122,7 +122,7 @@ module.exports =
   externalLinks:
     Talk: 'http://talk.penguinwatch.org'
     Blog: 'http://blog.biodiversitylibrary.org/'
-    Twitter: 'http://twitter.com/the_zooniverse'
+    '<i class="fa fa-twitter fa-lg">Twitter</i>': 'http://twitter.com/the_zooniverse'
 
   tasks:
     illustrations:
