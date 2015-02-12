@@ -24,13 +24,13 @@ module.exports = [{
   },{
     label: "Keywords"
     content: '''
-                  <p>Add general keywords or phrases about the primary species or subjects depicted in the  illustration Separate terms by semi-colons e.g. bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations.</p> 
-                 <p>If it is a chart or table, indicate the topic that the data represents e.g. Montana Wheat; Trout length; Livestock inventory; mirror</p>
-                  <p>If is it a map, add any current or historic geographic locations indicated by the map or caption e.g. Three Lakes; Southern China; Canada; Uriconium; Yorkshire</p>
+                  <p>Add general keywords or phrases about the primary species or subjects depicted in the  illustration Separate terms by semi-colons e.g. <b>bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations</b>.</p> 
+                 <p>If it is a chart or table, indicate the topic that the data represents e.g. <b>Montana Wheat; Trout length; Livestock inventory; mirror</b></p>
+                  <p>If is it a map, add any current or historic geographic locations indicated by the map or caption e.g. <b>Three Lakes; Southern China; Canada; Uriconium; Yorkshire</b></p>
                  '''
     figures: []
   },{
-    label: "Content"
+    label: "Tagging"
     content: '''
                  <p>Click on species, inscriptions and contributors in the illustration to record each one.</p>
                  '''
