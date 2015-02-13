@@ -87,7 +87,7 @@ team =
 module.exports =
   id: 'illustratedlife'
   background: 'background.jpg'
-  subjectGroup: '54dcebd07b9f99360b000001'
+  subjectGroup: true
 
   title: 'Science Gossip'
   summary: 'Uncover the history of citizen science'
