@@ -85,8 +85,9 @@ team =
     }]
 
 module.exports =
-  id: 'bhl'
+  id: 'illustratedlife'
   background: 'background.jpg'
+  subjectGroup: '54dcebd07b9f99360b000001'
 
   title: 'Science Gossip'
   summary: 'Uncover the history of citizen science'

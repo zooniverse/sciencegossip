@@ -7,7 +7,7 @@ class GroupsPage extends Controller
   template: (context) -> "
     <h2>Periodicals</h2>
     #{(for group in context.groups
-      "<p>#{group.name}</p>"
+      "<p>#{group.metadata.title}</p>"
     ).join '\n'}
   "
   

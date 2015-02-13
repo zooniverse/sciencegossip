@@ -103,7 +103,7 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
-  bhl_link.setAttribute 'href', subject.metadata.bhl_url
+  bhl_link.setAttribute 'href', "http://biodiversitylibrary.org/page/#{subject.metadata.page_id}"
   current_tool = null
 
 ms.on 'marking-surface:add-tool', (tool) ->
