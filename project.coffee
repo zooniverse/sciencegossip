@@ -144,8 +144,25 @@ module.exports =
       question: 'Draw rectangles around the illustrations on this page.'
       choices: [{
         type: Rectangle
-        label: 'Mark the illustrations'
-        color: '#333333'
+        label: 'drawing/painting/diagram'
+        value: 'drawing'
+        color: '#006666'
+        checked: true
+      },{
+        type: Rectangle
+        label: 'chart/table'
+        value: 'chart'
+        color: '#666666'
+      },{
+        type: Rectangle
+        label: 'photograph'
+        value: 'photograph'
+        color: '#660066'
+      },{
+        type: Rectangle
+        label: 'map'
+        value: 'map'
+        color: '#666600'
       }]
       next: 'parts'
     details:
@@ -153,17 +170,6 @@ module.exports =
       question: 'Add information about the illustration.'
       legend: 'Illustration'
       choices: [{
-        type: 'select'
-        key: 'type'
-        label: 'Type'
-        value: 'drawing/painting/diagram'
-        options: [
-          'drawing/painting/diagram'
-          'chart/table'
-          'photograph'
-          'map'
-        ]
-      },{
         type: 'textarea'
         key: 'keywords'
         label: 'Keywords'
