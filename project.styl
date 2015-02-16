@@ -119,7 +119,7 @@
       background: #000
       background: rgba( 0, 0, 0, .5)
       border: 1px solid transparent
-      margin: .2em .5em
+      margin: .2em .3em
       padding: .5em
       text-align: center
       font-size: 1em
@@ -129,10 +129,16 @@
       opacity: 0.3
     
     input:focus + .readymade-clickable
+    button:focus .readymade-clickable
+    a:focus
       border: 1px solid white
+      outline: 0
     
     button
       @extends #_RESET_BUTTON
+      
+      &:focus
+        outline: 0
     
     .small
       width: 15px
