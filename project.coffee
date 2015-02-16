@@ -88,6 +88,7 @@ module.exports =
   id: 'illustratedlife'
   background: 'background.jpg'
   subjectGroup: true
+  groups: group_page.groups
 
   title: 'Science Gossip'
   summary: 'Uncover the history of citizen science'

@@ -1,7 +1,7 @@
 MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
-
+Group = require 'zooniverse/models/project-group'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 
 SubjectViewer::template = require './templates/subject-viewer'
@@ -105,7 +105,13 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   
   bhl_link.setAttribute 'href', "http://biodiversitylibrary.org/page/#{subject.metadata.page_id}"
   current_tool = null
+  
+  group = (group for group in currentProject.groups when group.zooniverse_id is subject.group.zooniverse_id)
+  classify_page.el.find('h2.group-title').text group[0].metadata.title
 
+Group.on 'fetch', (e, groups) ->
+  currentProject.groups = groups
+  
 ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
   legend = tool.controls.el.querySelector 'legend'

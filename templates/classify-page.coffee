@@ -6,7 +6,9 @@ module.exports = -> """
       <p>Looks like we\'re temporarily out of data to classify. Please check back later!</p>
       <p>In the meantime, <a href="https://www.zooniverse.org/">check out some other projects in the Zooniverse!</a></p>
     </div>
-    <div class="readymade-subject-viewer-container"></div>
+    <div class="readymade-subject-viewer-container">
+    <h2 class="group-title"></h2>
+    </div>
     <div class="fixed-panel">
       <div class="drawing-controls">
         <button name="restart-tutorial">
