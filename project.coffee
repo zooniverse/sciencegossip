@@ -164,7 +164,7 @@ module.exports =
         value: 'map'
         color: '#666600'
       }]
-      next: 'parts'
+      next: 'details'
     details:
       type: 'details'
       question: 'Add information about the illustration.'
@@ -175,7 +175,7 @@ module.exports =
         label: 'Keywords'
         value: ''
       }]
-      next: 'details'
+      next: 'parts'
     parts: 
       type: 'drawing'
       question: 'Mark any species, inscriptions and contributors in the illustration.'
