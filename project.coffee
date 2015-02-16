@@ -5,6 +5,7 @@ GroupsPage = require './groups'
 
 group_page = new GroupsPage
 teampage = require './templates/team-page'
+subjectGroup = localStorage.getItem 'active-group'
 
 team =
   organizations: 
@@ -87,7 +88,7 @@ team =
 module.exports =
   id: 'illustratedlife'
   background: 'background.jpg'
-  subjectGroup: true
+  subjectGroup: subjectGroup ? true
   groups: group_page.groups
 
   title: 'Science Gossip'

@@ -6,8 +6,10 @@ class GroupsPage extends Controller
   
   template: (context) -> "
     <h2>Periodicals</h2>
+    <p>Select a periodical to work on.</p>
+    <a href='#/classify' role='button' data-group='all'>Random periodicals</a>
     #{(for group in context.groups
-      "<p>#{group.metadata.title}</p>"
+      "<a href='#/classify' role='button' data-group='#{group.id}'>#{group.metadata.title}</a>"
     ).join '\n'}
   "
   
@@ -16,11 +18,25 @@ class GroupsPage extends Controller
   constructor: ->
     super
     
+    classify_page = null
     @listenTo Api, 'ready', (e) =>
       Group.fetch()
+      currentProject = require 'zooniverse-readymade/current-project'
+      classify_page = currentProject.classifyPages[0]
     
     @listenTo Group, 'fetch', (e, @groups) =>
       @el.html @template @
+      @el.on 'click', 'a[role="button"]', ->
+        group_id = @.getAttribute 'data-group'
+        if group_id == 'all'
+          group_id = true
+          localStorage.removeItem 'active-group'
+        else 
+          localStorage.setItem 'active-group', group_id
+        classify_page.Subject.group = group_id
+        classify_page.Subject.destroyAll()
+        classify_page.Subject.next()
+        
   
   listenTo: (thing, eventName, handler) ->
     addEvent = if 'on' of thing then 'on' else 'addEventListener'
