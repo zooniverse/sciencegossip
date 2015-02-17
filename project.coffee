@@ -123,9 +123,9 @@ module.exports =
   }]
   
   externalLinks:
-    Talk: 'http://talk.penguinwatch.org'
     Blog: 'http://blog.biodiversitylibrary.org/'
     '<i class="fa fa-twitter fa-lg">Twitter</i>': 'http://twitter.com/the_zooniverse'
+    Feedback: 'https://docs.google.com/forms/d/1Ce3OeHM_PlCOIYQCLeBvrVSoxB7Mwku7g-GAD5_-xUc/viewform?c=0&w=1'
 
   tasks:
     illustrations:
