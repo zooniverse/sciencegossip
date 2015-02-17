@@ -1,46 +1,37 @@
 module.exports = [{
+  image: 'tutorial/marking.jpg'
+  alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
   content: '''
-    <p>If the page contains an illustration that falls into any one of the following categories: painting, drawing, diagram, chart, table, map, or photograph   <i>Please mark as “Yes”</i></p>
-    <p>If the page is blank or if the page contains an illustration that falls into one of the following categories:  title page, bookplate, book cover, index, table of content, decorative letters,  advertisements, table of content   <i>Please mark as “No”</i></p>
+    Are there any images, including drawings, tables, charts, photographs or maps? If yes, select which type and then draw a box around the image and nearby text. Mark ‘No’ for pages of text, blank pages, title pages, bookplates, book covers, indexes, tables of content, decorative letters or stamps and advertisements.
     
   '''
   }, {
+    image: 'tutorial/marking.jpg'
+    alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
     content: '''
-                 <p>If it is a full page illustration click OK to advance to the next screen, otherwise click <i>Mark the Illustration</i> and draw boundaries around the illustration.  Include any identifying information, such as a figure number or caption, within the bounding box.</p>
-                 <p><i>Click OK</i></p>
-                 '''
-    
-  }, {
-    content: '''
-                 <p>First Identify the type of illustration:</p>
-                <ul>
-                  <li>Drawing/painting/diagram</li>
-                  <li>Chart/table</li>
-                  <li>Photograph</li>
-                  <li>Map</li>
-                </ul>
-                 <p>For an example of each type see the Help screen</p>
-                 <p>Then add general keywords or phrases about the primary species or subjects depicted in the  illustration Separate terms by semi-colons e.g. bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations.</p> 
-                <p>If it is a chart or table, indicate the topic that the data represents e.g. Montana Wheat; Trout length; Livestock inventory; mirror</p>
-                 <p>If is it a map, add any current or historic geographic locations indicated by the map or caption e.g. Three Lakes; Southern China; Canada; Uriconium; Yorkshire</p>
+                 Next, add information about species/subject, by clicking that button and then clicking the centre of the image. If there are multiple subjects within an image, add information for each one. Don’t worry if you can’t find the common or scientific name, just add what you can. Tip: You can press the [dogeared page icon] to see the complete journal on the BHL website.
                  
                  '''
     
   }, {
+    image: 'tutorial/marking.jpg'
+    alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
     content: '''
-                 <p>Species</p>
-                 <p>If illustration displays or has distribution information about a particular plant or animal, indicate both the common and scientific name for the species if known</p>
-                 <p>e.g. Common Name=Ostrich  
-                                  Scientific Name=Struthio camelus</p>
-                 <p>Inscription</p>
-                 <p>Some paintings or drawings will have hand-written text such as a signature, date, or location at the bottom.  If it is legible, record the inscription exactly as it is written.  Separate each piece of data by semi-colons</p>
-                 <p>e.g. Near Alata Sidaillo; Dec 15- 1926-; Bycanistes cristatus</p>
-
-                 <p>Contributors</p>
-                 <p>Prints will often indicate the name of an individual or company involved with the creation of the illustration such as the original painter the print was based on, the engraver, or printing company.
-                                  Record any contributor names you find and their role if known</p>
-                 <p>e.g. Name=Werner Klinkhardt   Role=Printer
-                                  Name=Sharp & Son    Role=Illustrator</p>
+                 Some images have inscriptions underneath. Type what you see, including capitalization and punctuation, but don’t worry about accent marks.
+                 '''
+    
+  }, {
+    image: 'tutorial/marking.jpg'
+    alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
+    content: '''
+                 Sometimes people signed their drawings, photographs, charts and maps. Add inscriptions if you can find them. Look carefully, as they are often small and hard to see!
+                 '''
+    
+  }, {
+    image: 'tutorial/marking.jpg'
+    alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
+    content: '''
+                 At the end of the task you can add as many keywords as you like. Separate each tag with commas. These will help researchers find images later.
                  '''
     
   }]
