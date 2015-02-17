@@ -10,7 +10,7 @@ module.exports =
   '54dcebd07b9f99360b000005':
     image: 'mnh.jpg'
     alt: "Magazine of Natural History: illustrated frontispiece"
-    description: 'Meteorology. An early illustrated 19th century periodical, running between 1828-1840, established an edited by the influential botanist, landscape gardener and Fellow the Linnaean Society, John Claudius Loudon. The periodical would stand as one of the early communication mediums for British botanists.'
+    description: 'An early illustrated 19th century periodical, running between 1828-1840, established and edited by the influential botanist, landscape gardener and Fellow the Linnaean Society, John Claudius Loudon. The periodical would stand as one of the early communication mediums for British botanists.'
   '54dcebd07b9f99360b000007':
     image: 'midland.jpg'
     alt: "Midland Naturalist: illustrated frontispiece"
