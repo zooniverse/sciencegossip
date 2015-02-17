@@ -45,8 +45,8 @@ module.exports = [{
                    '''
       
       },{
-        image: ""
-        alt: "Inscription example"
+        image: "examples/inscriptions.jpg"
+        alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
         label: '''
                        <p>Inscriptions</p>
                        <ul>
