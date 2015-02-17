@@ -174,17 +174,48 @@
     font-size: 1.5em
   
   #periodicals
+  
+    h3
+      font-size: 1em
+      text-transform: none
+      margin: 0 auto .5em
+    
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+      text-indent: 0
+      
+      li
+        display: inline-block
+        width: 33%
+        min-height: 400px
       
     a[role=button]
       color: white
       text-decoration: none
-      width: 200px
-      min-height: 200px
       padding: 1em
       margin-right: 1em
       border-radius: 5px
       display: inline-block
+      min-height: 350px
+      width: 90%
       vertical-align: middle
-      text-align: center
-      border: 1px solid white
+      text-align: left
+      color: #fff
+      background: #000
+      background: rgba( 0, 0, 0, .5)
+      border: 1px solid transparent
+      
+      &:hover
+      &:focus
+        background: #000
+    
+      img
+        float: left
+        max-width: 200px
+        margin-right: .5em
+    
+      p
+        margin-left: 205px
 
