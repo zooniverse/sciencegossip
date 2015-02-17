@@ -15,9 +15,12 @@ class DetailsTask extends DecisionTree.Task
     <div class='decision-tree-question'>#{@question}</div>
 
     <form class='decision-tree-choices'>
+      #{ if @legend? then "
       <fieldset>
         <legend>#{@legend}</legend>
       </fieldset>
+      " else ''
+      }
     </form>
 
     <div class='decision-tree-confirmation'>
@@ -59,7 +62,8 @@ class DetailsTask extends DecisionTree.Task
     @form.find("[name=#{k}]").val(v) for k, v of value
   
   addChoiceTask: (choice, i) ->
-    fieldset = @el.querySelector 'fieldset'
+    fieldset = @el.querySelector 'fieldset' 
+    fieldset = fieldset ? @el.querySelector 'form'
     
     task = new @taskTypes[choice.type]
     html = task.choiceTemplate choice, i

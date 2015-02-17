@@ -12,6 +12,8 @@ class TextareaTask extends DecisionTree.Task
         name='#{choice.key}'
         value='#{choice.value}'
         data-choice-index='#{i}'
+        cols=27
+        rows=7
       ></textarea>
   </label>
   "

@@ -168,7 +168,6 @@ module.exports =
     details:
       type: 'details'
       question: 'Add information about the illustration.'
-      legend: 'Illustration'
       choices: [{
         type: 'textarea'
         key: 'keywords'
