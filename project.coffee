@@ -173,6 +173,7 @@ module.exports =
         key: 'keywords'
         label: 'Keywords'
         value: ''
+        placeholder: 'bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations'
       }]
       next: 'parts'
     parts: 
