@@ -14,6 +14,10 @@
   // @import './readymade/readymade.styl'
   // Overrides default styles here!
   
+  .readymade-generic-page
+    a
+      color: orange
+  
   [role=navigation]
     .fa-lg
       width: 15px
@@ -131,7 +135,7 @@
     input:focus + .readymade-clickable
     button:focus .readymade-clickable
     a:focus
-      border: 1px solid white
+      border: 1px solid orange
       outline: 0
     
     button
@@ -151,10 +155,10 @@
     a
       &:hover
       &:focus
-        color: yellow
+        color: orange
         
         .small
-          color: yellow
+          color: orange
     
   .readymade-marking-surface-container
     flex: 6
