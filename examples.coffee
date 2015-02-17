@@ -6,20 +6,20 @@ module.exports = [{
     
     figures: [{
       label: 'Drawing/painting/diagram'
-      image: ""
-      alt: "An example of a drawing"
+      image: "examples/inscriptions.jpg"
+      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
     },{
       label: 'Chart/table'
-      image: ""
-      alt: "An example of a chart"
+      image: "examples/inscriptions.jpg"
+      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
     },{
       label: "Photograph"
-      image: ""
-      alt: "An example of a photograph"
+      image: "examples/inscriptions.jpg"
+      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
     },{
       label: "Map"
-      image: ""
-      alt: "An example of a map"
+      image: "examples/inscriptions.jpg"
+      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
     }]
   },{
     label: "Keywords"
@@ -35,8 +35,8 @@ module.exports = [{
                  <p>Click on species, inscriptions and contributors in the illustration to record each one.</p>
                  '''
     figures: [{
-      image: ""
-      alt: "Species example"
+      image: "examples/inscriptions.jpg"
+      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
       label: '''
                    <p>Species</p>
                    <p>Common Name=Ostrich
@@ -57,7 +57,8 @@ module.exports = [{
                        '''
         
       },{
-        image: ""
+        image: "examples/inscriptions.jpg"
+        alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
         alt: "Contributors example"
         label: '''
                        <p>Contributors</p>
