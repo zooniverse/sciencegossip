@@ -17,7 +17,7 @@ module.exports = -> """
           <input type="checkbox" name="help" />
           <span class="readymade-clickable small">
             <i class="fa fa-question readymade-clickable-not-checked"></i>
-            <i class="fa fa-question readymade-clickable-checked" style="color: orangered;"></i>
+            <i class="fa fa-question readymade-clickable-checked" style="color: lightslategrey;"></i>
             <span>Help</span>
           </span>
         </label>
@@ -25,8 +25,8 @@ module.exports = -> """
         <label class="readymade-has-clickable" title="Favourite">
           <input type="checkbox" name="favorite" />
           <span class="readymade-clickable small">
-            #{translate 'readymade.favoriteIcon'}
-            #{translate 'readymade.favoriteIconChecked'}
+            <i class="fa fa-heart-o readymade-clickable-not-checked"></i>
+            <i class="fa fa-heart readymade-clickable-checked" style="color: lightslategrey;"></i>
             <span>#{translate 'readymade.favorite'}</span>
           </span>
         </label>
@@ -35,7 +35,7 @@ module.exports = -> """
           <input type="checkbox" name="pagezoom" />
           <span class="readymade-clickable small">
             <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
-            <i class="fa fa-search-plus readymade-clickable-checked" style="color: orangered;"></i>
+            <i class="fa fa-search-plus readymade-clickable-checked" style="color: lightslategrey;"></i>
             <span>Toggle full page</span>
           </span>
         </label>
