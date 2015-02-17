@@ -8,6 +8,8 @@
   "scripts": {
     "start": "zooniverse-readymade serve --port 3050 --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
     "build": "zooniverse-readymade build --output ./build --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
-    "stage": "npm run build && publisssh ./build demo.zooniverse.org/bhl && rm -rf ./build"
+    "stage": "npm run build && publisssh ./build demo.zooniverse.org/bhl && rm -rf ./build",
+    "beta": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org/beta && rm -rf ./build",
+    "deploy": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org && rm -rf ./build"
   }
 }
