@@ -3,6 +3,7 @@ MAX_PAGE_WIDTH = 600
 require './readymade/overrides.coffee'
 Group = require 'zooniverse/models/project-group'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
+DecisionTree = require 'zooniverse-decision-tree'
 
 SubjectViewer::template = require './templates/subject-viewer'
 
@@ -18,6 +19,8 @@ SubjectViewer::rescale = ()->
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 
 ClassifyPage::template = require './templates/classify-page'
+  
+DecisionTree.Task::confirmButtonLabel = 'Continue'
 
 currentProject = require 'zooniverse-readymade/current-project'
 classify_page = currentProject.classifyPages[0]
@@ -91,10 +94,8 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
 
-  if decisionTree.currentTask.getNext()
-    label = 'OK'
-  else
-    label = 'Finish'
+  label = 'Finish' unless decisionTree.currentTask.getNext()
+    
   decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
   current_tool?.mark.details = value if key is 'details'
