@@ -121,7 +121,7 @@ Group.on 'fetch', (e, groups) ->
 ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
   legend = tool.controls.el.querySelector 'legend'
-  legend.innerText = label if legend?
+  legend.textContent = label if legend?
 
 page_zoom.addEventListener 'change', (e) ->
   return unless current_tool?
