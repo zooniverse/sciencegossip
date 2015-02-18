@@ -6,20 +6,20 @@ module.exports = [{
     
     figures: [{
       label: 'Drawing/painting/diagram'
-      image: "examples/inscriptions.jpg"
-      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+      image: "examples/drawing.jpg"
+      alt: "Examples of pages with a drawing, a painting and a diagram."
     },{
       label: 'Chart/table'
-      image: "examples/inscriptions.jpg"
-      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+      image: "examples/chart.jpg"
+      alt: "3D chart showing sexual dimosrphism in bumble bees"
     },{
       label: "Photograph"
-      image: "examples/inscriptions.jpg"
-      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+      image: "examples/photograph.jpg"
+      alt: "Black and white photograph titled: A Rocky Mountain Carryall"
     },{
       label: "Map"
-      image: "examples/inscriptions.jpg"
-      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+      image: "examples/map.jpg"
+      alt: "Geological map of an area of the Hudson River"
     }]
   },{
     label: "Keywords"
@@ -35,13 +35,13 @@ module.exports = [{
                  <p>Click on species, inscriptions and contributors in the illustration to record each one.</p>
                  '''
     figures: [{
-      image: "examples/inscriptions.jpg"
-      alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+      image: "examples/species.jpg"
+      alt: "Painting of a crested hornbill"
       label: '''
                    <p>Species</p>
-                   <p>Common Name=Ostrich
+                   <p>Common Name=Crested Hornbill
                    <br>
-                   Scientific Name=Struthio camelus</p>
+                   Scientific Name=Bycanistes cristatus</p>
                    '''
       
       },{
@@ -57,15 +57,13 @@ module.exports = [{
                        '''
         
       },{
-        image: "examples/inscriptions.jpg"
-        alt: "Handwritten inscription reading: Near Alata Sidaillo, Dec 15- 1926,Bycanistes cristatus"
+        image: "examples/contributors.jpg"
+        alt: "Detail of a painting showing inscriptions for artist and publisher"
         alt: "Contributors example"
         label: '''
                        <p>Contributors</p>
-                       <ul>
-                         <li>Name=Werner Klinkhardt   Role=Printer</li>
-                         <li>Name=Sharp & Son    Role=Illustrator</li>
-                       </ul>
+                       
+                      <p>Name=Vincent Brooks Day & Son   Role=Lithographer</p>
                        '''
         
       }]
