@@ -244,8 +244,8 @@ module.exports =
       next: 'details'
     review:
       type: 'radio'
-      confirmButtonLabel: 'Finished'
-      question: "Use the 'Back' button to review your work, or click 'Finished' to move on to the next page."
+      confirmButtonLabel: 'Finish'
+      question: "Use the 'Back' button to review your work, or click 'Finish' to move on to the next page."
       choices: []
 
   firstTask: 'illustrations'
