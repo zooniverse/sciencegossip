@@ -46,6 +46,10 @@ page_zoom = document.querySelector('input[name=pagezoom]')
 help = document.querySelector('input[name=help]')
 
 classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
+  
+classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+  task.reset 'yes' if task.key is 'illustrations'
+  page_zoom.checked = false
 
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
@@ -66,13 +70,17 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     subjectViewer.rescale()
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
     current_tool?.el.classList.remove 'selected'
+    page_zoom.checked = false
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
     page_zoom.disabled = false
+    page_zoom.checked = true
     current_tool?.el.classList.remove 'selected'
     current_tool = rectangles[rect_index]
     w = current_tool?.mark.width + MARGIN * 2
     h = current_tool?.mark.height + MARGIN * 2
+    ms.svg.attr 'width', w
+    ms.svg.attr 'height', h
     ms.rescale current_tool?.mark.left - MARGIN, current_tool?.mark.top - MARGIN, w, h
     current_tool?.el.classList.add 'selected'
   
@@ -86,10 +94,6 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
       task.next = 'review'
     else
       task.next = 'parts'
-
-classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
-  task.reset 'yes' if task.key is 'illustrations'
-  page_zoom.checked = false
 
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
@@ -121,11 +125,15 @@ ms.on 'marking-surface:add-tool', (tool) ->
 page_zoom.addEventListener 'change', (e) ->
   return unless current_tool?
   if @.checked
-    ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
-  else
     w = current_tool.mark.width + MARGIN * 2
     h = current_tool.mark.height + MARGIN * 2
+    ms.svg.attr 'width', w
+    ms.svg.attr 'height', h
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
+  else
+    subjectViewer.rescale()
+    ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+    
 
 help.addEventListener 'change', (e) ->
   classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
