@@ -164,7 +164,7 @@ module.exports =
         value: 'map'
         color: '#666600'
       }]
-      next: 'details'
+      next: 'parts'
     details:
       type: 'details'
       question: 'Add information about the illustration.'
@@ -175,7 +175,7 @@ module.exports =
         value: ''
         placeholder: 'bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations'
       }]
-      next: 'parts'
+      next: 'review'
     parts: 
       type: 'drawing'
       question: 'Mark any species, inscriptions and contributors in the illustration.'

@@ -31,7 +31,7 @@ module.exports = [{
     image: 'tutorial/marking.jpg'
     alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
     content: '''
-                 At the end of the task you can add as many keywords as you like. Separate each tag with commas. These will help researchers find images later.
+                 At the end of the task you can add as many keywords to each subject as you like. Separate each tag with semicolons. These will help researchers find images later.
                  '''
     
   }]
