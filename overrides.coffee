@@ -79,8 +79,9 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     current_tool = rectangles[rect_index]
     w = current_tool?.mark.width + MARGIN * 2
     h = current_tool?.mark.height + MARGIN * 2
-    ms.svg.attr 'width', w
-    ms.svg.attr 'height', h
+    scale = subjectViewer.maxWidth / w
+    ms.svg.attr 'width', scale * w
+    ms.svg.attr 'height', scale * h
     ms.rescale current_tool?.mark.left - MARGIN, current_tool?.mark.top - MARGIN, w, h
     current_tool?.el.classList.add 'selected'
   
@@ -127,8 +128,9 @@ page_zoom.addEventListener 'change', (e) ->
   if @.checked
     w = current_tool.mark.width + MARGIN * 2
     h = current_tool.mark.height + MARGIN * 2
-    ms.svg.attr 'width', w
-    ms.svg.attr 'height', h
+    scale = subjectViewer.maxWidth / w
+    ms.svg.attr 'width', scale * w
+    ms.svg.attr 'height', scale * h
     ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
   else
     subjectViewer.rescale()
