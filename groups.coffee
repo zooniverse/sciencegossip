@@ -7,11 +7,8 @@ class GroupsPage extends Controller
   
   template: (context) -> "
     <h2>Periodicals</h2>
-    <p>Select a periodical to work on.</p>
+    <p>Select a periodical to work on or <a href='#/classify' data-group='all'>choose pages from random periodicals</a>.</p>
     <ul>
-      <li><a href='#/classify' role='button' data-group='all'>
-        <h3>Random periodicals</h3>
-      </a></li>
       #{(for group in context.groups
         "<li><a href='#/classify' role='button' data-group='#{group.id}'>
                 <img src='#{descriptions[group.id].image}' alt='#{descriptions[group.id].alt}'>
@@ -35,7 +32,7 @@ class GroupsPage extends Controller
     
     @listenTo Group, 'fetch', (e, @groups) =>
       @el.html @template @
-      @el.on 'click', 'a[role="button"]', ->
+      @el.on 'click', 'a[data-group]', ->
         group_id = @.getAttribute 'data-group'
         if group_id == 'all'
           group_id = true
