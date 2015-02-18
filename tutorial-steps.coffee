@@ -24,7 +24,7 @@ module.exports = [{
     image: 'tutorial/contributors.jpg'
     alt: 'Mark any contributors named in the illustration.'
     content: '''
-                 Sometimes people signed their drawings, photographs, charts and maps. Add inscriptions if you can find them. Look carefully, as they are often small and hard to see!
+                 Sometimes people signed their drawings, photographs, charts and maps. Add contributors if you can find them. Look carefully, as they are often small and hard to see!
                  '''
     
   }, {
