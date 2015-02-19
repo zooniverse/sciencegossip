@@ -9,7 +9,7 @@ module.exports = [{
     image: 'tutorial/species.jpg'
     alt: 'Mark any species in the illustration.'
     content: '''
-                 Next, add information about species, by clicking that button and then clicking the centre of each species in the illustration. If there are multiple species within an image, add information for each one. Don’t worry if you can’t find the common or scientific name, just add what you can. Tip: You can press the [dogeared page icon] to see the complete journal on the BHL website.
+                 Next, add information about species, by clicking that button and then clicking the centre of each species in the illustration. If there are multiple species within an image, add information for each one. Don’t worry if you can’t find the common or scientific name, just add what you can. <b>Tip:</b> Use the page link <span class="fa fa-file"></span> to read the original journal. Use the page zoom button <span class="fa fa-search-plus"></span> to toggle the full page view.
                  
                  '''
     
