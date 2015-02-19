@@ -10,8 +10,6 @@ module.exports = -> """
       <h2 class="group-title"></h2>
     </div>
     <div class="fixed-panel">
-      <div class="readymade-decision-tree-container"></div>
-      <div class="readymade-summary-container" style="display: none;"></div>
       <div class="drawing-controls">
         <label class="readymade-has-clickable" title="Help">
           <input type="checkbox" name="help" />
@@ -52,6 +50,8 @@ module.exports = -> """
           Original page
         </a>
       </div>
+      <div class="readymade-decision-tree-container"></div>
+      <div class="readymade-summary-container" style="display: none;"></div>
     </div>
   </div>
   <div class="readymade-field-guide-container" aria-hidden="false"></div>
