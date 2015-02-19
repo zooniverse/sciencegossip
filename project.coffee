@@ -169,7 +169,7 @@ module.exports =
       next: 'parts'
     details:
       type: 'details'
-      question: 'Add information about the illustration.'
+      question: 'Add keywords to the illustration.'
       choices: [{
         type: 'textarea'
         key: 'keywords'
