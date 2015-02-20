@@ -11,6 +11,20 @@ module.exports = -> """
     </div>
     <div class="fixed-panel">
       <div class="drawing-controls">
+        <a href="" target="bhl" class="readymade-clickable small" title="Original page">
+          <span class="fa fa-file"></span>
+          Original page
+        </a>
+        
+        <label class="readymade-has-clickable" title="Toggle full page">
+          <input type="checkbox" name="pagezoom" />
+          <span class="readymade-clickable small">
+            <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
+            <i class="fa fa-search-plus readymade-clickable-checked" style="color: gold;"></i>
+            <span>Toggle full page</span>
+          </span>
+        </label>
+        
         <label class="readymade-has-clickable" title="Help">
           <input type="checkbox" name="help" />
           <span class="readymade-clickable small">
@@ -29,26 +43,12 @@ module.exports = -> """
           </span>
         </label>
         
-        <label class="readymade-has-clickable" title="Toggle full page">
-          <input type="checkbox" name="pagezoom" />
-          <span class="readymade-clickable small">
-            <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
-            <i class="fa fa-search-plus readymade-clickable-checked" style="color: gold;"></i>
-            <span>Toggle full page</span>
-          </span>
-        </label>
-        
         <button name="restart-tutorial" title="Tutorial">
           <span class="readymade-clickable small">
             #{translate 'readymade.tutorialIcon'}
             <span>#{translate 'readymade.restartTutorial'}</span>
           </span>
         </button>
-        
-        <a href="" target="bhl" class="readymade-clickable small" title="Original page">
-          <span class="fa fa-file"></span>
-          Original page
-        </a>
       </div>
       <div class="readymade-decision-tree-container"></div>
       <div class="readymade-summary-container" style="display: none;"></div>
