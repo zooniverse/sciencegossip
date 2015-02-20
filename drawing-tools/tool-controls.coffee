@@ -32,6 +32,11 @@ class AccessibleControls extends ToolControls
   
   onToolSelect: =>
     @current_focus = document.activeElement
+    # autofocus the first field in the details form.
+    # doesn't seem to work without the 250ms delay.
+    setTimeout =>
+      @el.querySelector('input, select, textarea')?.focus()
+    , 250
     
   onToolDeselect: =>
     @current_focus.focus()
