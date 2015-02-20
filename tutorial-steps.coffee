@@ -21,7 +21,7 @@ module.exports = [{
                  '''
     
   }, {
-    image: 'tutorial/contributors.jpg'
+    image: 'tutorial/contributors1.jpg'
     alt: 'Mark any contributors named in the illustration.'
     content: '''
                  Sometimes people signed their drawings, photographs, charts and maps. Add contributors if you can find them. Look carefully, as they are often small and hard to see!
