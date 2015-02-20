@@ -9,7 +9,7 @@ module.exports = [{
     image: 'tutorial/species.jpg'
     alt: 'Mark any species in the illustration.'
     content: '''
-                 Next, add information about species, by clicking that button and then clicking the centre of each species in the illustration. If there are multiple species within an image, add information for each one. Don’t worry if you can’t find the common or scientific name, just add what you can. <b>Tip:</b> Use the page link <span class="fa fa-file"></span> to read the original journal. Use the page zoom button <span class="fa fa-search-plus"></span> to toggle the full page view.
+                 Next, add information about species, by clicking that button and then clicking the centre of each species in the illustration. If there are multiple species within an image, add information for each one. Don’t worry if you can’t find the common or scientific name, just add what you can. <b>Tip:</b> Use the page link (<span class="fa fa-file"></span>) button to read the original journal. Use the page zoom (<span class="fa fa-search-plus"></span>) button to toggle the full page view.
                  
                  '''
     
@@ -31,7 +31,7 @@ module.exports = [{
     image: 'tutorial/continue.jpg'
     alt: 'Tag all the illustrations'
     content: '''
-                 Continue to add tags and keywords to each illustration you found on the page. At the end, click 'Finish' to move on to another page.
+                 Add keywords to describe the illustration overall. You can find examples with the Help (<span class="fa fa-question"></span>) button. Continue to add tags and keywords to each illustration you found on the page. At the end, click 'Finish' to move on to another page.
                  '''
     
   }]
