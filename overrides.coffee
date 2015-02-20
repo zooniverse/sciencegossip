@@ -44,12 +44,14 @@ rect_index = 0
 bhl_link = document.querySelector('a[target=bhl]')
 page_zoom = document.querySelector('input[name=pagezoom]')
 help = document.querySelector('input[name=help]')
+favorite = document.querySelector('input[name=favorite]')
 
 classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
   
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   task.reset 'yes' if task.key is 'illustrations'
   page_zoom.checked = false
+  favorite.checked = false
 
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
