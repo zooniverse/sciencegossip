@@ -59,6 +59,8 @@ class AccessibleControls extends ToolControls
   addFieldset: (legend) ->
     form = @el.querySelector 'form'
     form.insertAdjacentHTML 'afterbegin', "<fieldset><legend>#{legend}</legend></fieldset>"
+  
+  render: ->
     
   
 module.exports = AccessibleControls
