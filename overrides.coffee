@@ -16,6 +16,15 @@ SubjectViewer::rescale = ()->
     width: scale * @maxWidth
     height: scale * @maxHeight
 
+SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
+  w = rectangle.width + margin * 2
+  h = rectangle.height + margin * 2
+  scale = @markingSurface.el.parentNode.offsetWidth / w
+  scale = Math.min scale, limit
+  @markingSurface.svg.attr 'width', scale * w
+  @markingSurface.svg.attr 'height', scale * h
+  @markingSurface.rescale rectangle.left - margin, rectangle.top - margin, w, h
+
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 
 ClassifyPage::template = require './templates/classify-page'
@@ -79,12 +88,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     page_zoom.checked = true
     current_tool?.el.classList.remove 'selected'
     current_tool = rectangles[rect_index]
-    w = current_tool?.mark.width + MARGIN * 2
-    h = current_tool?.mark.height + MARGIN * 2
-    scale = ms.el.parentNode.offsetWidth / w
-    ms.svg.attr 'width', scale * w
-    ms.svg.attr 'height', scale * h
-    ms.rescale current_tool?.mark.left - MARGIN, current_tool?.mark.top - MARGIN, w, h
+    subjectViewer.crop current_tool.mark, MARGIN if current_tool?
     current_tool?.el.classList.add 'selected'
   
   if task.key is 'details'
@@ -130,12 +134,7 @@ ms.on 'marking-surface:add-tool', (tool) ->
 page_zoom.addEventListener 'change', (e) ->
   return unless current_tool?
   if @.checked
-    w = current_tool.mark.width + MARGIN * 2
-    h = current_tool.mark.height + MARGIN * 2
-    scale = ms.el.parentNode.offsetWidth / w
-    ms.svg.attr 'width', scale * w
-    ms.svg.attr 'height', scale * h
-    ms.rescale current_tool.mark.left - MARGIN, current_tool.mark.top - MARGIN, w, h
+    subjectViewer.crop current_tool.mark, MARGIN
   else
     subjectViewer.rescale()
     ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
