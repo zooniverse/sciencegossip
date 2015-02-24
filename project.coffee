@@ -97,7 +97,7 @@ module.exports =
         type: Pinpoint
         label: 'Species'
         value: 'species'
-        color: '#333'
+        color: 'darkorange'
         checked: true
         details:[{
           type: 'text'
@@ -116,7 +116,7 @@ module.exports =
         type: Pinpoint
         label: 'Inscription'
         value: 'inscription'
-        color: '#333'
+        color: 'darkorange'
         details:[{
           type: 'textarea'
           key: 'inscription'
@@ -130,7 +130,7 @@ module.exports =
         type: Pinpoint
         label: 'Contributor'
         value: 'contributor'
-        color: '#333'
+        color: 'darkorange'
         details:[{
           type: 'text'
           key: 'name'
