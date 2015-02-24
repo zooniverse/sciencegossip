@@ -81,7 +81,7 @@ module.exports =
       next: 'parts'
     details:
       type: 'details'
-      question: 'Add keywords to the illustration.'
+      question: 'Add keywords to describe each illustration.'
       choices: [{
         type: 'textarea'
         key: 'keywords'
@@ -92,7 +92,7 @@ module.exports =
       next: 'review'
     parts: 
       type: 'drawing'
-      question: 'Mark any species, inscriptions and contributors in the illustration.'
+      question: 'Mark any species, inscriptions and contributors in the illustrations.'
       choices: [{
         type: Pinpoint
         label: 'Species'
