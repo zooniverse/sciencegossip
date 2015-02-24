@@ -43,8 +43,8 @@ ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @scaleX is 0
 
 LAST_TASK = true
-INITIAL_STEPS = 2 # number of initial steps before annotating rectangles
-ANNOTATION_STEPS = 2 # number of annotation steps per rectangle
+INITIAL_STEPS = 3 # number of initial steps before annotating rectangles
+ANNOTATION_STEPS = 1 # number of annotation steps per rectangle
 MARGIN = 25 # margin on cropped images
 
 current_tool = null
@@ -98,7 +98,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     if LAST_TASK
       task.next = 'review'
     else
-      task.next = 'parts'
+      task.next = 'details'
 
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
@@ -110,7 +110,18 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     decisionTree.currentTask.confirmButton.innerHTML = label if label?
   
   current_tool?.mark.details = value if key is 'details'
-  current_tool?.mark.parts = value if key is 'parts'
+  
+  if key is 'parts'
+    for tool in ms.tools when tool.mark._taskIndex is 1
+      rectangle = tool.mark
+      rectangle.parts = []
+      for mark in value
+        inside = 
+          mark.x >= rectangle.left && 
+          mark.x <= (rectangle.left + rectangle.width) && 
+          mark.y >= rectangle.top && 
+          mark.y <= (rectangle.top + rectangle.height)
+        rectangle.parts.push mark if inside
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
@@ -123,6 +134,12 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
 
 Group.on 'fetch', (e, groups) ->
   currentProject.groups = groups
+  
+ms.addEvent 'marking-surface:element:start', 'rect', (e) ->
+  current_tool?.el.classList.remove 'selected'
+  current_tool = (tool for tool in ms.tools when tool.outline?.el is e.target)[0]
+  current_tool?.el.classList.add 'selected'
+  
   
 ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
