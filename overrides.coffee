@@ -85,10 +85,8 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   
   if task.key in ['details', 'parts'] and rectangles.length > 0
     page_zoom.disabled = false
-    page_zoom.checked = true
     current_tool?.el.classList.remove 'selected'
     current_tool = rectangles[rect_index]
-    subjectViewer.crop current_tool.mark, MARGIN if current_tool?
     current_tool?.el.classList.add 'selected'
   
   if task.key is 'details'
