@@ -49,6 +49,9 @@ module.exports =
       },{
         label: 'No'
         value: 'no'
+      },{
+        label: 'Skip this page'
+        value: 'skip'
       }]
     illustration:
       type: 'drawing'
