@@ -96,9 +96,12 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   if task.key is 'details'
     LAST_TASK = rect_index == rectangles.length - 1 if rectangles.length
     if LAST_TASK
+      label = 'Continue'
       task.next = 'review'
     else
+      label = 'Next'
       task.next = 'details'
+    decisionTree.currentTask.confirmButton.innerHTML = label if label?
 
 classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
   {key, value} = detail
