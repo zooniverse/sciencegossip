@@ -138,6 +138,22 @@ ms.addEvent 'marking-surface:element:start', 'rect', (e) ->
   current_tool = (tool for tool in ms.tools when tool.outline?.el is e.target)[0]
   current_tool?.el.classList.add 'selected'
 
+moving = false
+ms.on 'marking-surface:change', (mark) ->
+  unless moving
+    moving = true
+    setTimeout ->
+      if mark?._taskIndex is 2
+        current_tool?.el.classList.remove 'selected'
+    
+        for tool in ms.tools when tool.mark._taskIndex is 1
+          rectangle = tool.mark
+          if mark.inside rectangle
+            current_tool = tool
+            current_tool?.el.classList.add 'selected'
+      moving = false
+    , 500
+
 ms.addEvent 'marking-surface:tool:select', ({detail}) ->
   pinpoint = detail[0] if detail[0].mark._taskIndex is 2
   current_tool?.el.classList.remove 'selected' if pinpoint?
