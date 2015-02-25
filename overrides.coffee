@@ -139,29 +139,25 @@ ms.addEvent 'marking-surface:element:start', 'rect', (e) ->
   current_tool?.el.classList.add 'selected'
 
 moving = false
+update_current_tool = (mark) ->
+  return unless mark.inside?
+  current_tool?.el.classList.remove 'selected'
+  for tool in ms.tools when tool.mark._taskIndex is 1
+    rectangle = tool.mark
+    if mark.inside rectangle
+      current_tool = tool
+      current_tool?.el.classList.add 'selected'
+  
 ms.on 'marking-surface:change', (mark) ->
   unless moving
     moving = true
     setTimeout ->
-      if mark?._taskIndex is 2
-        current_tool?.el.classList.remove 'selected'
-    
-        for tool in ms.tools when tool.mark._taskIndex is 1
-          rectangle = tool.mark
-          if mark.inside rectangle
-            current_tool = tool
-            current_tool?.el.classList.add 'selected'
+      update_current_tool mark
       moving = false
     , 500
 
 ms.addEvent 'marking-surface:tool:select', ({detail}) ->
-  pinpoint = detail[0] if detail[0].mark._taskIndex is 2
-  current_tool?.el.classList.remove 'selected' if pinpoint?
-  for tool in ms.tools when tool.mark._taskIndex is 1
-    rectangle = tool.mark
-    if pinpoint?.mark.inside rectangle
-      current_tool = tool
-      current_tool?.el.classList.add 'selected'
+  update_current_tool detail[0].mark
   
 ms.on 'marking-surface:add-tool', (tool) ->
   {label} = decisionTree.currentTask.getChoice() ? ''
