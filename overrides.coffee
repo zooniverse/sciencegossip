@@ -118,13 +118,8 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
     for tool in ms.tools when tool.mark._taskIndex is 1
       rectangle = tool.mark
       rectangle.parts = []
-      for mark in value
-        inside = 
-          mark.x >= rectangle.left && 
-          mark.x <= (rectangle.left + rectangle.width) && 
-          mark.y >= rectangle.top && 
-          mark.y <= (rectangle.top + rectangle.height)
-        rectangle.parts.push mark if inside
+      for mark in value when mark.inside rectangle
+        rectangle.parts.push mark
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight

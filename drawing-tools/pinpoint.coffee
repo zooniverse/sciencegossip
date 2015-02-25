@@ -1,8 +1,10 @@
 BasePoint = require 'zooniverse-readymade/lib/drawing-tools/point'
 ToolControls = require './fieldset-controls'
+PointMark = require './mark'
 
 class Pinpoint extends BasePoint
   @Controls: ToolControls
+  @Mark: PointMark
   
   constructor: ->
     super
