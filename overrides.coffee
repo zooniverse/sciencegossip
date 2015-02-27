@@ -134,6 +134,7 @@ Group.on 'fetch', (e, groups) ->
   currentProject.groups = groups
   
 ms.addEvent 'marking-surface:element:start', 'rect', (e) ->
+  return unless decisionTree.currentTask.key is 'parts'
   current_tool?.el.classList.remove 'selected'
   current_tool = (tool for tool in ms.tools when tool.outline?.el is e.target)[0]
   current_tool?.el.classList.add 'selected'
