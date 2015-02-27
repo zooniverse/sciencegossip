@@ -31,7 +31,7 @@ module.exports = [{
     image: 'tutorial/continue.jpg'
     alt: 'Tag all the illustrations'
     content: '''
-                 Add keywords to describe each illustration overall and separate each term with semicolons. You can find examples with the Help (<span class="fa fa-question"></span>) button. Keywords can be drawn from the text or be words you would find helpful if searching for images online. Keywords make images more findable.
+                 Add keywords to describe the highlighted illustration. Separate each term with a semicolon. You can find examples with the Help (<span class="fa fa-question"></span>) button. Keywords can be drawn from the text or be words you would find helpful if searching for images online. Keywords make images more findable.
                  '''
 
   }]
