@@ -29,6 +29,9 @@ class AccessibleControls extends ToolControls
       if e.which == 9 && !e.shiftKey
         delete_button.focus()
         e.preventDefault()
+    
+    @addEvent 'submit', 'form', (e) =>
+      e.preventDefault()
   
   onToolSelect: =>
     @current_focus = document.activeElement
