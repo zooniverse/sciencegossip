@@ -1,9 +1,14 @@
 MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
+window.zooniverse ?= {}
+window.zooniverse.views ?= {}
+window.zooniverse.views.profile = require './templates/profile'
 Group = require 'zooniverse/models/project-group'
+User = require 'zooniverse/models/user'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 DecisionTree = require 'zooniverse-decision-tree'
+ProfileStats = require './profile-stats'
 
 SubjectViewer::template = require './templates/subject-viewer'
 
@@ -37,6 +42,13 @@ classify_page = currentProject.classifyPages[0]
 {decisionTree, subjectViewer} = classify_page
   
 ms = subjectViewer.markingSurface
+
+profile_stats = new ProfileStats
+currentProject.profile.el.find('.profile-stats').append profile_stats.el
+
+User.on 'change', (e, user) =>
+  profile_stats.el.html ''
+  profile_stats.renderTemplate()
 
 # set the image scale if not already set  
 ms.on 'marking-surface:add-tool', (tool) ->
