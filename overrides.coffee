@@ -61,6 +61,7 @@ MARGIN = 25 # margin on cropped images
 
 current_tool = null
 rect_index = 0
+group_id = null
 
 bhl_link = document.querySelector('a[target=bhl]')
 page_zoom = document.querySelector('input[name=pagezoom]')
@@ -141,6 +142,12 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   
   group = (group for group in currentProject.groups when group.zooniverse_id is subject.group.zooniverse_id)
   classify_page.el.find('h2.group-title').text group[0].metadata.title
+  group_id = group[0].id
+
+classify_page.on classify_page.FINISH_SUBJECT,  ->
+  User.current?.project.groups[group_id].classification_count++
+  profile_stats.el.html ''
+  profile_stats.renderTemplate()
 
 Group.on 'fetch', (e, groups) ->
   currentProject.groups = groups
