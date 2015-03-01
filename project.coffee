@@ -167,7 +167,7 @@ module.exports =
 
   firstTask: 'illustrations'
   
-  examples: require './examples'
+  examples: require './content/examples'
 
-  tutorialSteps: require './tutorial-steps'
+  tutorialSteps: require './content/tutorial-steps'
 
