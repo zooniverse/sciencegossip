@@ -18,4 +18,4 @@ module.exports =
   '54dcebd07b9f99360b000009':
     image: 'intellectual.jpg'
     alt: "The Intellectual Observer: illustrated frontispiece"
-    description: 'After the dissolution of Recreative Science, the journal was reconfigured and turned into the Intellectual Observer, and ran between 1868-1868. The key concern of the journal was to expand their audience from those interested in natural history as a hobby, to amateurs who wanted to keep abreast of the most recent developments in the various natural history pursuits.'
+    description: 'After the dissolution of Recreative Science, the journal was reconfigured and turned into the Intellectual Observer, and ran between 1862-1868. The key concern of the journal was to expand their audience from those interested in natural history as a hobby, to amateurs who wanted to keep abreast of the most recent developments in the various natural history pursuits.'
