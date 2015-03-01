@@ -11,6 +11,15 @@ module.exports = -> """
     </div>
     <div class="fixed-panel">
       <div class="drawing-controls">
+        <label class="readymade-has-clickable" title="Help">
+          <input type="checkbox" name="help" />
+          <span class="readymade-clickable small">
+            <i class="fa fa-question readymade-clickable-not-checked"></i>
+            <i class="fa fa-question readymade-clickable-checked" style="color: gold;"></i>
+            <span>Help</span>
+          </span>
+        </label>
+        
         <a href="" target="bhl" class="readymade-clickable small" title="Original page">
           <span class="fa fa-file"></span>
           Original page
@@ -22,15 +31,6 @@ module.exports = -> """
             <i class="fa fa-search-plus readymade-clickable-not-checked"></i>
             <i class="fa fa-search-plus readymade-clickable-checked" style="color: gold;"></i>
             <span>Toggle full page</span>
-          </span>
-        </label>
-        
-        <label class="readymade-has-clickable" title="Help">
-          <input type="checkbox" name="help" />
-          <span class="readymade-clickable small">
-            <i class="fa fa-question readymade-clickable-not-checked"></i>
-            <i class="fa fa-question readymade-clickable-checked" style="color: gold;"></i>
-            <span>Help</span>
           </span>
         </label>
         
