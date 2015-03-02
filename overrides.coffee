@@ -9,6 +9,7 @@ User = require 'zooniverse/models/user'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 DecisionTree = require 'zooniverse-decision-tree'
 ProfileStats = require './profile-stats'
+SubjectMetadata = require './subject-metadata'
 
 SubjectViewer::template = require './templates/subject-viewer'
 
@@ -45,6 +46,9 @@ ms = subjectViewer.markingSurface
 
 profile_stats = new ProfileStats
 currentProject.profile.el.find('.profile-stats').append profile_stats.el
+
+subject_metadata = new SubjectMetadata
+classify_page.el.find('.group-title').after subject_metadata.el
 
 User.on 'change', (e, user) =>
   profile_stats.el.html ''
