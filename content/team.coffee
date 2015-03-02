@@ -20,20 +20,29 @@ module.exports =
   missouri: 
     title: "Missouri Botanical Garden"
     members: [{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/trish.jpg'
       name: 'Trish Rose-Sandler'
       location: 'St Louis, MO, USA'
-      description: 'Missouri Botanical Garden'
+      description: '''
+                         Though a humanities scholar and librarian by training, was hired by the Biodiversity Heritage Library over 5 years ago to serve as their metadata guru. Now manages several BHL-related projects including Art of Life and Purposeful Gaming and is based in the Center for Biodiversity Informatics at Missouri Botanical Garden.
+                         '''
+      
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/william.jpg'
       name: 'William Ulate'
       location: 'St Louis, MO, USA'
-      description: 'Missouri Botanical Garden'
+      description: '''
+                         A kind (of) Computer Scientist, father of one, who got into Biodiversity Informatics 15 years ago and then flew from Costa Rica to work for global Biodiversity Heritage Library based in the Center for Biodiversity Informatics at Missouri Botanical Garden.
+                         '''
+      
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/mike.jpg'
       name: 'Mike Lichtenberg'
       location: 'St Louis, MO, USA'
-      description: 'Missouri Botanical Garden'
+      description: '''
+                         Software developer with more than 20 years of experience who has been involved with the Biodiversity Heritage Library since 2007.
+                         '''
+      
     }]
   
   conscicom: 
