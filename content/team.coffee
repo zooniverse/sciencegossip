@@ -48,17 +48,17 @@ module.exports =
   conscicom: 
     title: "Constructing Scientific Communities"
     members: [{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/sally.jpg'
       name: 'Sally Shuttleworth'
       location: 'Oxford, UK'
       description: 'Principle Investigator'
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/chris.jpg'
       name: 'Chris Lintott'
       location: 'Oxford, UK'
       description: 'Co-investigator'
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/geoff.jpg'
       name: 'Geoffrey Belknap'
       location: 'Leicester, UK'
       description: 'Postdoctoral researcher, Constructing Scientific Communities'
@@ -68,18 +68,18 @@ module.exports =
   developers: 
     title: "Zooniverse"
     members: [{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/jim.jpg'
       name: 'Jim O\'Donnell'
       location: 'Oxford, UK'
       description: 'Web developer'
       url: 'http://twitter.com/pekingspring'
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/victoria.jpg'
       name: 'Victoria Van Hyning'
       location: 'Oxford, UK'
       description: 'Humanities project lead'
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/adam.jpg'
       name: 'Adam McMaster'
       location: 'Oxford, UK'
       description: 'Web infrastructure'
