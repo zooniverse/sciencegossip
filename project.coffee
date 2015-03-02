@@ -34,7 +34,8 @@ module.exports =
   }]
   
   externalLinks:
-    Blog: 'http://blog.biodiversitylibrary.org/'
+    Talk: 'http://talk.sciencegossip.org'
+    Blog: 'http://blog.sciencegossip.org'
     '<i class="fa fa-twitter fa-lg">Twitter</i>': 'http://twitter.com/the_zooniverse'
 
   tasks:
