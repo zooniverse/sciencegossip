@@ -2,16 +2,16 @@ module.exports =
   organizations: 
     title: "Partners"
     members: [{
-      image: '//placehold.it/100.png?text=Example'
-      name: 'Missouri Botanical Garden'
+      image: 'team/bhl.jpg'
+      name: 'Biodiversity Heritage Library'
       description: 'description'
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/conscicom.jpg'
       name: 'Constructing Scientific Communities'
       description: 'AHRC research project'
       url: ['http://conscicom.org/', 'https://twitter.com/conscicom']
     },{
-      image: '//placehold.it/100.png?text=Example'
+      image: 'team/zooniverse.jpg'
       name: 'Zooniverse'
       description: 'Citizen Science Platform'
       url: ['https://www.zooniverse.org/', 'https://twitter.com/the_zooniverse', 'https://github.com/zooniverse']
