@@ -2,6 +2,10 @@ module.exports =
   organizations: 
     title: "Partners"
     members: [{
+      image: 'team/mbg.jpg'
+      name: 'Missouri Botanical Garden'
+      description: 'Founded in 1859, the Missouri Botanical Garden is the United States’ oldest botanical garden in continuous operation and a National Historic Landmark located in St. Louis, MO. The Garden is a center for botanical research and science education, and has served as the technical development team for the Biodiversity Heritage Library since 2007.'
+    },{
       image: 'team/bhl.jpg'
       name: 'Biodiversity Heritage Library'
       description: 'The Biodiversity Heritage Library (BHL) is a consortium of natural history and botanical libraries that cooperate to digitize the legacy literature of biodiversity held in their collections and to make that literature available for open access and responsible use as a part of a global “biodiversity commons.”'
