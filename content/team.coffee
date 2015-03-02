@@ -4,16 +4,17 @@ module.exports =
     members: [{
       image: 'team/bhl.jpg'
       name: 'Biodiversity Heritage Library'
-      description: 'description'
+      description: 'The Biodiversity Heritage Library (BHL) is a consortium of natural history and botanical libraries that cooperate to digitize the legacy literature of biodiversity held in their collections and to make that literature available for open access and responsible use as a part of a global “biodiversity commons.”'
+      url: ['http://biodiversitylibrary.org', 'https://twitter.com/biodivlibrary']
     },{
       image: 'team/conscicom.jpg'
       name: 'Constructing Scientific Communities'
-      description: 'AHRC research project'
+      description: 'This <abbr title="Arts & Humanities Research Council">AHRC</abbr> Science in Culture project brings together historical and literary research in the nineteenth century with contemporary scientific practice, looking at the ways in which patterns of popular communication and engagement in nineteenth-century science can offer models for current practice.'
       url: ['http://conscicom.org/', 'https://twitter.com/conscicom']
     },{
       image: 'team/zooniverse.jpg'
       name: 'Zooniverse'
-      description: 'Citizen Science Platform'
+      description: 'The Zooniverse is home to the internet’s largest, most popular and most successful citizen science projects. The Zooniverse and the suite of projects it contains is produced, maintained and developed by the Citizen Science Alliance (CSA). The member institutions of the CSA work with many academic and other partners around the world to produce projects that use the efforts and ability of volunteers to help scientists and researchers.'
       url: ['https://www.zooniverse.org/', 'https://twitter.com/the_zooniverse', 'https://github.com/zooniverse']
     }]
 
