@@ -36,7 +36,7 @@ module.exports =
   externalLinks:
     Talk: 'http://talk.sciencegossip.org'
     Blog: 'http://blog.sciencegossip.org'
-    '<i class="fa fa-twitter fa-lg">Twitter</i>': 'http://twitter.com/the_zooniverse'
+    '<i class="fa fa-twitter fa-lg">Twitter</i>': 'http://twitter.com/BioDivLibrary'
 
   tasks:
     illustrations:
