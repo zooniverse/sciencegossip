@@ -10,7 +10,7 @@ module.exports =
   magazineofnatura:
     image: 'groups/mnh.jpg'
     alt: "Magazine of Natural History: illustrated frontispiece"
-    description: 'An early illustrated 19th century periodical, running between 1828-1840, established and edited by the influential botanist, landscape gardener and Fellow the Linnaean Society, John Claudius Loudon. The periodical would stand as one of the early communication mediums for British botanists.'
+    description: 'An early illustrated 19th century periodical, running between 1828-1840, established and edited by the influential botanist, landscape gardener and Fellow of the Linnaean Society, John Claudius Loudon. The periodical would stand as one of the early communication mediums for British botanists.'
   midlandnaturalis:
     image: 'groups/midland.jpg'
     alt: "Midland Naturalist: illustrated frontispiece"
