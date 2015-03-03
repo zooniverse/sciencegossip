@@ -62,6 +62,7 @@ module.exports =
       name: 'Chris Lintott'
       location: 'Oxford, UK'
       description: 'Co-investigator'
+      url: 'http://twitter.com/chrislintott'
     },{
       image: 'team/geoff.jpg'
       name: 'Geoffrey Belknap'
@@ -83,9 +84,11 @@ module.exports =
       name: 'Victoria Van Hyning'
       location: 'Oxford, UK'
       description: 'Humanities project lead'
+      url: 'http://twitter.com/VanHyningV'
     },{
       image: 'team/adam.jpg'
       name: 'Adam McMaster'
       location: 'Oxford, UK'
       description: 'Web infrastructure'
+      url: 'http://twitter.com/astopy'
     }]
