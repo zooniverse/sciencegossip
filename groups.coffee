@@ -11,9 +11,9 @@ class GroupsPage extends Controller
     <ul>
       #{(for group in context.groups
         "<li><a href='#/classify' role='button' data-group='#{group.id}'>
-                <img src='#{descriptions[group.id].image}' alt='#{descriptions[group.id].alt}'>
+                <img src='#{descriptions[group.name]?.image}' alt='#{descriptions[group.name]?.alt}'>
                 <h3>#{group.metadata.title}</h3>
-                <p>#{descriptions[group.id].description}</p>
+                <p>#{descriptions[group.name]?.description}</p>
               </a></li>"
       ).join '\n'}
     </ul>
