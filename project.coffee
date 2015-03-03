@@ -55,7 +55,7 @@ module.exports =
       }]
     illustration:
       type: 'drawing'
-      question: 'Draw rectangles around the illustrations on this page.'
+      question: 'Choose the type of illustration, then draw rectangles around each illustration of that type.'
       choices: [{
         type: Rectangle
         label: 'drawing/painting/diagram'

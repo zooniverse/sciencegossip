@@ -1,8 +1,15 @@
 module.exports = [{
+  image: 'tutorial/illustrations.jpg'
+  alt: 'Are there any illustrations on this page?'
+  content: '''
+    If there are there illustrations such as diagrams, drawings, tables, charts, photographs or maps on the page you are viewing choose 'Yes'. Mark ‘No’ for pages of text, blank pages, title pages, bookplates, book covers, indexes, tables of content, decorative letters or stamps and advertisements.
+
+  '''
+  },{
   image: 'tutorial/marking.jpg'
   alt: 'Mark any illustrations on the page by selecting the type and drawing a rectangle around each one.'
   content: '''
-    Are there any illustrations, including drawings, tables, charts, photographs or maps? If yes, select the relevant tab and then draw a box around each illustration and their captions. Mark ‘No’ for pages of text, blank pages, title pages, bookplates, book covers, indexes, tables of content, decorative letters or stamps and advertisements.
+    If there are illustrations, choose the type of illustration then draw a rectangle around each one. You do not need to draw a rectangle if it is a full page illustration
 
   '''
   }, {
