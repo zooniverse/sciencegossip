@@ -26,22 +26,24 @@ class GroupsPage extends Controller
     
     classify_page = null
     @listenTo Api, 'ready', (e) =>
-      Group.fetch()
       currentProject = require 'zooniverse-readymade/current-project'
       classify_page = currentProject.classifyPages[0]
+      Api.current.get("/projects/#{Api.current.project}/groups/active")
+        .done (groups) =>
+          @renderGroups groups, classify_page
     
-    @listenTo Group, 'fetch', (e, @groups) =>
-      @el.html @template @
-      @el.on 'click', 'a[data-group]', ->
-        group_id = @.getAttribute 'data-group'
-        if group_id == 'all'
-          group_id = true
-          localStorage.removeItem 'active-group'
-        else 
-          localStorage.setItem 'active-group', group_id
-        classify_page.Subject.group = group_id
-        classify_page.Subject.destroyAll()
-        classify_page.Subject.next()
+  renderGroups: (@groups, classify_page) =>
+    @el.html @template @
+    @el.on 'click', 'a[data-group]', ->
+      group_id = @.getAttribute 'data-group'
+      if group_id == 'all'
+        group_id = true
+        localStorage.removeItem 'active-group'
+      else 
+        localStorage.setItem 'active-group', group_id
+      classify_page.Subject.group = group_id
+      classify_page.Subject.destroyAll()
+      classify_page.Subject.next()
         
   
   listenTo: (thing, eventName, handler) ->
