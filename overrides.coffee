@@ -168,7 +168,7 @@ ms.addEvent 'marking-surface:element:start', 'rect', (e) ->
 
 moving = false
 update_current_tool = (mark) ->
-  return unless mark.inside?
+  return unless mark && mark.inside?
   current_tool?.el.classList.remove 'selected'
   for tool in ms.tools when tool.mark._taskIndex is 1
     rectangle = tool.mark
