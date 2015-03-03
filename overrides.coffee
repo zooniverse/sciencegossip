@@ -149,7 +149,11 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   group_id = group[0].id
 
 classify_page.on classify_page.FINISH_SUBJECT,  ->
-  User.current?.project.groups[group_id].classification_count++
+  if User.current?.project.groups[group_id]
+    User.current?.project.groups[group_id].classification_count++
+  else
+    User.current?.project.groups[group_id] = {title: '', classification_count: 1}
+    profile_stats.setGroupTitles()
   profile_stats.el.html ''
   profile_stats.renderTemplate()
 
