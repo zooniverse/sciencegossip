@@ -42,4 +42,4 @@ module.exports =
   quarterlyjourna:
     image: 'groups/geological-society.jpg'
     alt: "The Quarterly Journal of the Geological Society of London: illustrated frontispiece"
-    description: 'Running between 1845-1971, this journal is structured in a similar fashion to the <cite>Wiltshire Archaeological and Natural History Magazine</cite> and the <cite>Midland Naturalist</cite>, acting as the scholarly journal for the Geological Society of London. The audience and professional status of this journal shifted much more dramatically, however, then other society journals over the nineteenth century as the Geological Society of London competed for professional status with more well established Royal Geological Society.'
+    description: 'Running between 1845-1971, this journal is structured in a similar fashion to the <cite>Wiltshire Archaeological and Natural History Magazine</cite> and the <cite>Midland Naturalist</cite>, acting as the scholarly journal for the Geological Society of London.'
