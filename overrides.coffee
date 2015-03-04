@@ -77,7 +77,6 @@ classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   task.reset 'yes' if task.key is 'illustrations'
   page_zoom.checked = false
-  favorite.checked = false
 
 # moving back and forward through the array of marked SVG rectangles
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
@@ -143,6 +142,7 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   
   bhl_link.setAttribute 'href', "http://biodiversitylibrary.org/page/#{subject.metadata.page_id}"
   current_tool = null
+  favorite.checked = false
   
   group = (group for group in currentProject.groups when group.zooniverse_id is subject.group.zooniverse_id)
   classify_page.el.find('h2.group-title').text group[0].metadata.title
