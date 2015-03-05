@@ -25,7 +25,7 @@ module.exports = [{
     label: "Keywords"
     content: '''
                   <p>Add general keywords or phrases about the primary species or subjects depicted in the illustration. Separate terms by semi-colons. Keywords can be based on information from a caption, when available, or simply your observation of objects in the image. You do not need to repeat information from the species, inscription and contributor task. Add keywords in your native language.</p>
-                  <p>e.g. <b>bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations</b>.</p> 
+                  <p>e.g. <b>bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor; meteorological observations</b>.</p> 
                  <p>If it is a chart or table, indicate the topic that the data represents e.g. <b>Montana Wheat; Trout length; Livestock inventory; mirror</b>. The topic may be indicated in a caption or in the surrounding text of the page. You do not need to transcribe all the data in the table.</p>
                   <p>If is it a map, add any current or historic geographic locations indicated by the map or caption e.g. <b>Three Lakes; Southern China; Canada; Uriconium; Yorkshire</b></p>
                  '''
