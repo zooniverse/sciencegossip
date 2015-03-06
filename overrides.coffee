@@ -39,6 +39,7 @@ ClassifyPage::onNoMoreSubjects = ()->
   # fall back from /groups{group_id}/subjects to /groups/subjects
   if typeof @Subject.group is 'string'
     @Subject.group = true
+    localStorage.removeItem 'active-group'
     @Subject.next()
   # otherwise, there really aren't any subjects left
   else
