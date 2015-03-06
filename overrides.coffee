@@ -34,7 +34,19 @@ SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 
 ClassifyPage::template = require './templates/classify-page'
-  
+
+ClassifyPage::onNoMoreSubjects = ()->
+  # fall back from /groups{group_id}/subjects to /groups/subjects
+  if typeof @Subject.group is 'string'
+    @Subject.group = true
+    @Subject.next()
+  # otherwise, there really aren't any subjects left
+  else
+    @noMoreSubjectsMessage.show()
+    @subjectViewerContainer.hide()
+    @decisionTreeContainer.hide()
+    @summaryContainer.hide()
+
 DecisionTree.Task::confirmButtonLabel = 'Continue'
 
 currentProject = require 'zooniverse-readymade/current-project'
