@@ -37,9 +37,16 @@ class ProfileStats extends Controller
       @el.html @template @
   
   setGroupTitles: ->
-    return unless @user && @groups
+    return unless @user && @groups.length
     for key, group of @user.project.groups
       group.title = g.metadata.title for g in @groups when g.id is key
+      @setGroupTitle key unless group.title
+  
+  setGroupTitle: (id)->
+    Api.current.get("/projects/#{Api.current.project}/groups/#{id}")
+      .done (g)=>
+        @user.project.groups[id].title = g.metadata.title
+        @el.html @template @
         
   
   listenTo: (thing, eventName, handler) ->
