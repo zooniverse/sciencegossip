@@ -23,10 +23,8 @@ class ProfileStats extends Controller
   constructor: ->
     super
     
-    classify_page = null
     @listenTo Api, 'ready', (e) =>
       Group.fetch()
-      currentProject = require 'zooniverse-readymade/current-project'
     
     @listenTo Group, 'fetch', (e, @groups) =>
       @setGroupTitles()
