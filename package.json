@@ -1,6 +1,6 @@
 {
   "name": "bhl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "marking-surface": "0.6.4",
     "zooniverse-readymade": "zooniverse/zooniverse-readymade#a11y"
