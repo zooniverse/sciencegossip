@@ -12,7 +12,7 @@ subjectGroup = localStorage.getItem 'active-group'
 module.exports =
   id: 'illustratedlife'
   background: 'background.jpg'
-  subjectGroup: subjectGroup ? true
+  subjectGroup: subjectGroup ? 'random'
   groups: group_page.groups
 
   title: 'Science Gossip'
