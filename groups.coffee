@@ -37,7 +37,7 @@ class GroupsPage extends Controller
     @el.on 'click', 'a[data-group]', ->
       group_id = @.getAttribute 'data-group'
       if group_id == 'all'
-        group_id = true
+        group_id = 'random'
         localStorage.removeItem 'active-group'
       else 
         localStorage.setItem 'active-group', group_id
