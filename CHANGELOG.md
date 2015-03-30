@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/zooniverse/BHL/tree/HEAD)
+
+[Full Changelog](https://github.com/zooniverse/BHL/compare/v0.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bugfix: 'out of data' error message [\#31](https://github.com/zooniverse/BHL/pull/31) ([eatyourgreens](https://github.com/eatyourgreens))
+
 ## [v0.1.0](https://github.com/zooniverse/BHL/tree/v0.1.0) (2015-03-17)
 
 **Implemented enhancements:**
