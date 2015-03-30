@@ -37,7 +37,7 @@ ClassifyPage::template = require './templates/classify-page'
 
 ClassifyPage::onNoMoreSubjects = ()->
   # fall back from /groups{group_id}/subjects to /groups/subjects
-  if @Subject.group is not 'random'
+  if @Subject.group != 'random'
     @Subject.group = 'random'
     localStorage.removeItem 'active-group'
     @Subject.next()
