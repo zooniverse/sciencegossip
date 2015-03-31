@@ -217,3 +217,23 @@ page_zoom.addEventListener 'change', (e) ->
 help.addEventListener 'change', (e) ->
   classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
     
+# Add some API stats to the home page
+APIInfoContainer = require 'zooniverse-readymade/lib/api-info-container'
+
+classifications = new APIInfoContainer
+  href: "/projects/#{currentProject.id}"
+  template: """
+    <span data-readymade-info-key="complete_count">···</span>
+    pages completed
+  """
+
+users = new APIInfoContainer
+  href: "/projects/#{currentProject.id}"
+  template: """
+    <span data-readymade-info-key="user_count">···</span>
+    volunteers participating
+  """
+
+$(currentProject.homePage).find('.readymade-footer').prepend classifications.el
+$(currentProject.homePage).find('.readymade-footer').append users.el
+    
