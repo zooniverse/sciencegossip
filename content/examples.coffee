@@ -22,6 +22,33 @@ module.exports = [{
       alt: "Geological map of an area of the Hudson River"
     }]
   },{
+    label: 'Not illustrations'
+    content:'''
+                You can mark the following types of pages as 'No illustrations'.
+                '''
+    figures: [{
+      image: "examples/bookplate.jpg"
+      alt: "Bookplate for the library of Ernest E. Williams, showing an engraving of a lizard"
+      label: "bookplates"
+    },{
+      image: "examples/decorative.jpg"
+      alt: "Decorative banner and initial letter from Descriptions des Plantes de l'Amerique"
+      label: "decorative work"
+    },{
+      image: "examples/advert.jpg"
+      alt: "Page of advertisements from the Gardener's Chronicle"
+      label: "advertisements"
+    },{
+      image: "examples/title.jpg"
+      alt: "Title page from the Phillipine Journal of Science"
+      label: "title pages"
+    },{
+      image: "examples/cover.jpg"
+      alt: "A cover from Science Gossip"
+      label: "book covers"
+    }]
+    
+  },{
     label: "Keywords"
     content: '''
                   <p>Add general keywords or phrases about the primary species or subjects depicted in the illustration. Separate terms by semi-colons. Keywords can be based on information from a caption, when available, or simply your observation of objects in the image. You do not need to repeat information from the species, inscription and contributor task. Add keywords in your native language.</p>
