@@ -10,6 +10,8 @@
 
 - Add link to FAQs to classifiction interface [\#29](https://github.com/zooniverse/BHL/issues/29)
 
+- Add examples of things we want marked as no images on page [\#28](https://github.com/zooniverse/BHL/issues/28)
+
 - Adding example of table to help [\#27](https://github.com/zooniverse/BHL/issues/27)
 
 **Merged pull requests:**
