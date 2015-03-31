@@ -10,8 +10,8 @@ module.exports = [{
       alt: "Examples of pages with a drawing, a painting and a diagram."
     },{
       label: 'Chart/table'
-      image: "examples/chart.jpg"
-      alt: "3D chart showing sexual dimosrphism in bumble bees"
+      image: "examples/chart.png"
+      alt: "3D chart showing sexual dimosrphism in bumble bees and a table of planetary positions"
     },{
       label: "Photograph"
       image: "examples/photograph.jpg"
