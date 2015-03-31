@@ -4,6 +4,12 @@
 
 [Full Changelog](https://github.com/zooniverse/BHL/compare/v0.1.0...HEAD)
 
+**Implemented enhancements:**
+
+- Add link to FAQs to classifiction interface [\#29](https://github.com/zooniverse/BHL/issues/29)
+
+- Adding example of table to help [\#27](https://github.com/zooniverse/BHL/issues/27)
+
 **Merged pull requests:**
 
 - Bugfix: 'out of data' error message [\#31](https://github.com/zooniverse/BHL/pull/31) ([eatyourgreens](https://github.com/eatyourgreens))
