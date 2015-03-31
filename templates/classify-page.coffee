@@ -52,6 +52,7 @@ module.exports = -> """
       </div>
       <div class="readymade-decision-tree-container"></div>
       <div class="readymade-summary-container" style="display: none;"></div>
+      <p class="faq-link">Need some help? <a target="discuss" href="http://talk.sciencegossip.org/#/boards/BSC0000005/discussions/DSC00000wh">See the <abbr title="Frequently Asked Questions">FAQ</abbr>!</a></p>
     </div>
   </div>
   <div class="readymade-field-guide-container" aria-hidden="false"></div>
