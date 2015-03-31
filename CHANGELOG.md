@@ -6,11 +6,15 @@
 
 **Implemented enhancements:**
 
+- Add some measurement of progress to the site [\#32](https://github.com/zooniverse/BHL/issues/32)
+
 - Add link to FAQs to classifiction interface [\#29](https://github.com/zooniverse/BHL/issues/29)
 
 - Adding example of table to help [\#27](https://github.com/zooniverse/BHL/issues/27)
 
 **Merged pull requests:**
+
+- Add some project stats to the home page. [\#33](https://github.com/zooniverse/BHL/pull/33) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Bugfix: 'out of data' error message [\#31](https://github.com/zooniverse/BHL/pull/31) ([eatyourgreens](https://github.com/eatyourgreens))
 
