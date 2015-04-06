@@ -11,7 +11,7 @@ module.exports = [{
     },{
       label: 'Chart/table'
       image: "examples/chart.png"
-      alt: "3D chart showing sexual dimosrphism in bumble bees and a table of planetary positions"
+      alt: "3D chart showing sexual dimorphism in bumble bees and a table of planetary positions"
     },{
       label: "Photograph"
       image: "examples/photograph.jpg"
