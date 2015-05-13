@@ -16,6 +16,10 @@
 
 **Merged pull requests:**
 
+- bugfix: fetch the group details from the API if the title isn't defined [\#35](https://github.com/zooniverse/BHL/pull/35) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- Fix typo in chart/table example description [\#34](https://github.com/zooniverse/BHL/pull/34) ([marten](https://github.com/marten))
+
 - Add some project stats to the home page. [\#33](https://github.com/zooniverse/BHL/pull/33) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Bugfix: 'out of data' error message [\#31](https://github.com/zooniverse/BHL/pull/31) ([eatyourgreens](https://github.com/eatyourgreens))
