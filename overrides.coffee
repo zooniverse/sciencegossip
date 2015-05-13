@@ -4,6 +4,7 @@ require './readymade/overrides.coffee'
 window.zooniverse ?= {}
 window.zooniverse.views ?= {}
 window.zooniverse.views.profile = require './templates/profile'
+Api = require 'zooniverse/lib/api'
 Group = require 'zooniverse/models/project-group'
 User = require 'zooniverse/models/user'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
@@ -158,8 +159,17 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   favorite.checked = false
   
   group = (group for group in currentProject.groups when group.zooniverse_id is subject.group.zooniverse_id)
-  classify_page.el.find('h2.group-title').text group[0].metadata.title
-  group_id = group[0].id
+  group = group[0]
+  if group?
+    classify_page.el.find('h2.group-title').text group.metadata.title
+    group_id = group.id
+  else
+    Api.current.get("/projects/#{Api.current.project}/groups/#{subject.group_id}")
+      .done (g) ->
+        currentProject.groups.push g
+        classify_page.el.find('h2.group-title').text g.metadata.title
+        group_id = g.id
+  
 
 classify_page.on classify_page.FINISH_SUBJECT,  ->
   if User.current?.project.groups[group_id]
