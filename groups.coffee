@@ -10,9 +10,12 @@ class GroupsPage extends Controller
     <p>Select a periodical to work on or <a href='#/classify' data-group='all'>choose pages from random periodicals</a>.</p>
     <ul>
       #{(for group in context.groups
+        percent = 100 * group.stats.complete / group.stats.total
         "<li><a href='#/classify' role='button' data-group='#{group.id}'>
                 <img src='#{descriptions[group.name]?.image}' alt='#{descriptions[group.name]?.alt}'>
                 <h3>#{group.metadata.title}</h3>
+                <p class='stats'><b>#{parseInt percent}%</b> complete</p>
+                <p class='stats'><b>#{group.stats.complete}/#{group.stats.total}</b> pages completed</p>
                 <p>#{descriptions[group.name]?.description}</p>
               </a></li>"
       ).join '\n'}
