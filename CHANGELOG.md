@@ -6,6 +6,8 @@
 
 **Implemented enhancements:**
 
+- Show progress for active groups [\#36](https://github.com/zooniverse/BHL/issues/36)
+
 - Add some measurement of progress to the site [\#32](https://github.com/zooniverse/BHL/issues/32)
 
 - Add link to FAQs to classifiction interface [\#29](https://github.com/zooniverse/BHL/issues/29)
@@ -15,6 +17,8 @@
 - Adding example of table to help [\#27](https://github.com/zooniverse/BHL/issues/27)
 
 **Merged pull requests:**
+
+- Add percentage and total completed to the periodicals page. [\#37](https://github.com/zooniverse/BHL/pull/37) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - bugfix: fetch the group details from the API if the title isn't defined [\#35](https://github.com/zooniverse/BHL/pull/35) ([eatyourgreens](https://github.com/eatyourgreens))
 
