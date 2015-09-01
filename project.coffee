@@ -23,14 +23,21 @@ module.exports =
   
 
   pages: [{
-      'Periodicals': group_page
+    key: 'periodicals'
+    title: 'Periodicals'
+    content: group_page
+  },{
+    key: 'about'
+    title: 'About'
+    content: [{
+      key: 'science-gossip'
+      title: 'Science Gossip'
+      content: about
     },{
-    'About': [
-      {
-        'Science Gossip': about
-      },{
-        'The Team': teampage team
-      }]
+      key: 'the-team'
+      title: 'The Team'
+      content: teampage team
+    }]
   }]
   
   externalLinks:
