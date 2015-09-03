@@ -56,7 +56,7 @@ module.exports =
       image: 'team/sally.jpg'
       name: 'Sally Shuttleworth'
       location: 'Oxford, UK'
-      description: 'Principle Investigator'
+      description: 'Principal Investigator'
     },{
       image: 'team/chris.jpg'
       name: 'Chris Lintott'
