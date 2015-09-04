@@ -43,6 +43,10 @@ module.exports =
     image: 'groups/geological-society.jpg'
     alt: "The Quarterly Journal of the Geological Society of London: illustrated frontispiece"
     description: 'Running between 1845-1971, this journal is structured in a similar fashion to the <cite>Wiltshire Archaeological and Natural History Magazine</cite> and the <cite>Midland Naturalist</cite>, acting as the scholarly journal for the Geological Society of London.'
+  mobot:
+    image: 'groups/gardeners-chronicle.jpg'
+    alt: "Gardeners’ Chronicle: illustrated frontispiece"
+    description: 'One of the most influential and well known periodicals for gardeners and naturalists, which was regularly used by Charles Darwin as a place to collect new facts, and to ask questions of fellow naturalists. Running between 1841-1967, this was a periodical designed to incorporate the middle class fashion for maintaining home gardens while simultaneously publishing new observations of plants and animals.'
   mobot2:
     image: 'groups/botany-miscellany.jpg'
     alt: "Botany Miscellany: illustrated frontispiece"
