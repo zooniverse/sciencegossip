@@ -43,23 +43,23 @@ module.exports =
     image: 'groups/geological-society.jpg'
     alt: "The Quarterly Journal of the Geological Society of London: illustrated frontispiece"
     description: 'Running between 1845-1971, this journal is structured in a similar fashion to the <cite>Wiltshire Archaeological and Natural History Magazine</cite> and the <cite>Midland Naturalist</cite>, acting as the scholarly journal for the Geological Society of London.'
-    mobot2:
-      image: 'groups/botany-miscellany.jpg'
-      alt: "Botany Miscellany: illustrated frontispiece"
-      description: '1830-33, this is the first of a series of consecutive journals established and edited by the founding director of the Royal botanical gardens at Kew, William Jackson Hooker. Established in order to act as the essential organ for botanical science in the nineteenth century, the journal would undergo multiple name, style and publisher changes over the 28 years.'
-    mobot3:
-      image: 'groups/journal-botany.jpg'
-      alt: "Journal of Botany: illustrated frontispiece"
-      description: '1834-42, this is the first title change which Hooker makes to the journal – along with a change in publishers from the well known publisher John Murray (later of <cite>Origin of Species</cite> fame) to Longman, Rees, Brown, Green & Longman, which was a well established general interest publisher, and which now operates under the simpler name Longman.'
-    mobot4:
-      image: 'groups/london-journal-botany.jpg'
-      alt: "London Journal of Botany: illustrated frontispiece"
-      description: '1842-1848, changing both title and publisher again – this time to Hippolyte Baillière, the brother of Jean-Baptiste Baillière who had established medical and scientific publishing company in Paris just after the end of the Napoleonic wars. The change in title to reflect the London centred focus of the journal, which was spurred on by the fact that Hooker had been made director of Kew – located just to the south of London – the year previously.'
-    mobot5:
-      image: 'groups/hookers-journal.jpg'
-      alt: "Hooker's Journal of Botany: illustrated frontispiece"
-      description: '1849-1857, the final iteration of Hooker’s botanical journals, this title and publisher change – to Reeve, Benham and Reeve who were specialist natural history publishers – reflects the established authority of both Hooker and Kew as the centre for botanical science in the Victorian period.'
-    journalofquekket:
-      image: 'groups/quekett-journal.jpg'
-      alt: "Quekett Journal: illustrated frontispiece"
-      description: '1868-present, this journal, which acts as the official journal for one of the longest running amateur microscopical societies. The society, which was established in 1865, came directly out of the community developed through the natural history periodical Science Gossip – with founding members including the publisher Robert Hardwicke and editor and mycologist Mordecai Cubitt Cooke.'
+  mobot2:
+    image: 'groups/botany-miscellany.jpg'
+    alt: "Botany Miscellany: illustrated frontispiece"
+    description: '1830-33, this is the first of a series of consecutive journals established and edited by the founding director of the Royal botanical gardens at Kew, William Jackson Hooker. Established in order to act as the essential organ for botanical science in the nineteenth century, the journal would undergo multiple name, style and publisher changes over the 28 years.'
+  mobot3:
+    image: 'groups/journal-botany.jpg'
+    alt: "Journal of Botany: illustrated frontispiece"
+    description: '1834-42, this is the first title change which Hooker makes to the journal – along with a change in publishers from the well known publisher John Murray (later of <cite>Origin of Species</cite> fame) to Longman, Rees, Brown, Green & Longman, which was a well established general interest publisher, and which now operates under the simpler name Longman.'
+  mobot4:
+    image: 'groups/london-journal-botany.jpg'
+    alt: "London Journal of Botany: illustrated frontispiece"
+    description: '1842-1848, changing both title and publisher again – this time to Hippolyte Baillière, the brother of Jean-Baptiste Baillière who had established medical and scientific publishing company in Paris just after the end of the Napoleonic wars. The change in title to reflect the London centred focus of the journal, which was spurred on by the fact that Hooker had been made director of Kew – located just to the south of London – the year previously.'
+  mobot5:
+    image: 'groups/hookers-journal.jpg'
+    alt: "Hooker's Journal of Botany: illustrated frontispiece"
+    description: '1849-1857, the final iteration of Hooker’s botanical journals, this title and publisher change – to Reeve, Benham and Reeve who were specialist natural history publishers – reflects the established authority of both Hooker and Kew as the centre for botanical science in the Victorian period.'
+  journalofquekket:
+    image: 'groups/quekett-journal.jpg'
+    alt: "Quekett Journal: illustrated frontispiece"
+    description: '1868-present, this journal, which acts as the official journal for one of the longest running amateur microscopical societies. The society, which was established in 1865, came directly out of the community developed through the natural history periodical Science Gossip – with founding members including the publisher Robert Hardwicke and editor and mycologist Mordecai Cubitt Cooke.'
