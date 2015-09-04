@@ -16,7 +16,13 @@
 
 - Adding example of table to help [\#27](https://github.com/zooniverse/BHL/issues/27)
 
+**Closed issues:**
+
+- "The gardener's magazine and register of rural & domestic improvement" doesn't appear among the periodicals in Recents; the  classified pages are not counted in the personal stats [\#38](https://github.com/zooniverse/BHL/issues/38)
+
 **Merged pull requests:**
+
+- Images and descriptions for batch 3 periodicals [\#39](https://github.com/zooniverse/BHL/pull/39) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Add percentage and total completed to the periodicals page. [\#37](https://github.com/zooniverse/BHL/pull/37) ([eatyourgreens](https://github.com/eatyourgreens))
 
