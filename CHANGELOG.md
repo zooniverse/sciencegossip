@@ -18,6 +18,8 @@
 
 **Closed issues:**
 
+- Tutorial button says "readymade.next" [\#40](https://github.com/zooniverse/BHL/issues/40)
+
 - "The gardener's magazine and register of rural & domestic improvement" doesn't appear among the periodicals in Recents; the  classified pages are not counted in the personal stats [\#38](https://github.com/zooniverse/BHL/issues/38)
 
 **Merged pull requests:**
