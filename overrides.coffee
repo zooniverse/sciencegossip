@@ -231,7 +231,7 @@ help.addEventListener 'change', (e) ->
 # Add some API stats to the home page
 APIInfoContainer = require 'zooniverse-readymade/lib/api-info-container'
 
-classifications = new APIInfoContainer
+pages = new APIInfoContainer
   href: "/projects/#{currentProject.id}"
   template: """
     <span data-readymade-info-key="complete_count">···</span>
@@ -245,6 +245,24 @@ users = new APIInfoContainer
     volunteers participating
   """
 
-$(currentProject.homePage).find('.readymade-footer').prepend classifications.el
+# Add a banner for the email challenge
+classifications = new APIInfoContainer
+  href: "/projects/#{currentProject.id}"
+  template: """
+    <span data-readymade-info-key="classification_count">···</span>
+  """
+banner = """
+  <div class="challenge">
+    <p> classifications submitted. Help us reach <b>400,000</b> classifications.</p>
+  </div>
+  """
+
+$(currentProject.homePage).find('.readymade-footer').prepend pages.el
 $(currentProject.homePage).find('.readymade-footer').append users.el
+
+$('#wrapper')
+  .prepend banner
+  .find '.challenge p'
+  .prepend classifications.el
+
     
