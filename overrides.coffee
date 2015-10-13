@@ -229,7 +229,7 @@ help.addEventListener 'change', (e) ->
   classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
     
 # Add some API stats to the home page
-APIInfoContainer = require 'zooniverse-readymade/lib/api-info-container'
+APIInfoContainer = require './readymade/api-info-container'
 
 pages = new APIInfoContainer
   href: "/projects/#{currentProject.id}"
@@ -246,6 +246,7 @@ users = new APIInfoContainer
   """
 
 # Add a banner for the email challenge
+TARGET = 400000
 classifications = new APIInfoContainer
   href: "/projects/#{currentProject.id}"
   template: """
@@ -253,7 +254,7 @@ classifications = new APIInfoContainer
   """
 banner = """
   <div class="challenge">
-    <p> classifications submitted. Help us reach <b>400,000</b> classifications.</p>
+    <p> classifications submitted. Help us reach <b>#{TARGET.toLocaleString()}</b> classifications.</p>
   </div>
   """
 
