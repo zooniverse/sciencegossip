@@ -63,7 +63,7 @@ module.exports =
     image: 'groups/hookers-journal.jpg'
     alt: "Hooker's Journal of Botany: illustrated frontispiece"
     description: '1849-1857, the final iteration of Hooker’s botanical journals, this title and publisher change – to Reeve, Benham and Reeve who were specialist natural history publishers – reflects the established authority of both Hooker and Kew as the centre for botanical science in the Victorian period.'
-  journalofquekket:
+  journalofquekett:
     image: 'groups/quekett-journal.jpg'
     alt: "Quekett Journal: illustrated frontispiece"
     description: '1868-present, this journal, which acts as the official journal for one of the longest running amateur microscopical societies. The society, which was established in 1865, came directly out of the community developed through the natural history periodical Science Gossip – with founding members including the publisher Robert Hardwicke and editor and mycologist Mordecai Cubitt Cooke.'
