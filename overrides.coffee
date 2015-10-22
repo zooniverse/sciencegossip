@@ -152,6 +152,7 @@ classify_page.el.on decisionTree.CHANGE, ({originalEvent: {detail}})->
         rectangle.parts.push mark
 
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
+  classify_page.getNextSubject() if subject.state == 'complete'
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
   
   bhl_link.setAttribute 'href', "http://biodiversitylibrary.org/page/#{subject.metadata.page_id}"
