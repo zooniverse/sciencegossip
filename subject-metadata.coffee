@@ -5,7 +5,7 @@ class SubjectMetadata extends Controller
   
   template: (context) ->
     "
-      <p class='subject-metadata'><b>Volume:</b> #{context.metadata?.volume} <b>Year:</b> #{context.metadata?.year} <b>Page:</b> #{context.metadata?.page_no}</p>
+      <p class='subject-metadata'><b>Volume:</b> #{context.metadata?.volume} <b>Year:</b> #{context.metadata?.year} <b>Page:</b> #{context.metadata?.page_no} (<a target='bhl' href='http://biodiversitylibrary.org/page/#{context.metadata.page_id}'>Read this article</a>)</p>
     "
   
   metadata:
