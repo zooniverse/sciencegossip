@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "marking-surface": "0.6.4",
+    "publisssh": "~0.2.6",
     "zooniverse-readymade": "~1.0.0"
   },
   "scripts": {
