@@ -9,8 +9,16 @@ group_page = new GroupsPage
 teampage = require './templates/team-page'
 subjectGroup = localStorage.getItem 'active-group'
 
+[apiHost, apiProxyPath] = if window.location.hostname is 'www.sciencegossip.org'
+  ['http://www.sciencegossip.org', '/_ouroboros_api/proxy']
+else
+  [null, null]
+
 module.exports =
   id: 'illustratedlife'
+  apiHost: apiHost
+  apiProxyPath: apiProxyPath
+
   background: 'background.jpg'
   subjectGroup: subjectGroup ? 'random'
   groups: group_page.groups
