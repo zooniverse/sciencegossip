@@ -81,7 +81,7 @@ current_tool = null
 rect_index = 0
 group_id = null
 
-bhl_link = document.querySelector('a[target=bhl]')
+bhl_link = document.querySelector('.drawing-controls a[target=bhl]')
 page_zoom = document.querySelector('input[name=pagezoom]')
 help = document.querySelector('input[name=help]')
 favorite = document.querySelector('input[name=favorite]')
