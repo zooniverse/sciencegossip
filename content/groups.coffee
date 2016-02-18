@@ -67,3 +67,23 @@ module.exports =
     image: 'groups/quekett-journal.jpg'
     alt: "Quekett Journal: illustrated frontispiece"
     description: '1868-present, this journal, which acts as the official journal for one of the longest running amateur microscopical societies. The society, which was established in 1865, came directly out of the community developed through the natural history periodical Science Gossip – with founding members including the publisher Robert Hardwicke and editor and mycologist Mordecai Cubitt Cooke.'
+  'journal-of-the-royal-microscopical-society':
+    image: ''
+    alt: ''
+    description: ''
+  "the-geologist-a-popular-monthly-magazine-of-geology":
+    image: ''
+    alt: ''
+    description: ''
+  "journal-of-botany-british-and-foreign":
+    image: ''
+    alt: ''
+    description: ''
+  "the-geological-magazine-or-monthly-journal-of-geology":
+    image: ''
+    alt: ''
+    description: ''
+  "the-journal-of-horticulture-cottage-gardener-and-country-gentlemen":
+    image: ''
+    alt: ''
+    description: ''
