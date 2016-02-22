@@ -68,22 +68,22 @@ module.exports =
     alt: "Quekett Journal: illustrated frontispiece"
     description: '1868-present, this journal, which acts as the official journal for one of the longest running amateur microscopical societies. The society, which was established in 1865, came directly out of the community developed through the natural history periodical Science Gossip – with founding members including the publisher Robert Hardwicke and editor and mycologist Mordecai Cubitt Cooke.'
   'journal-of-the-royal-microscopical-society':
-    image: ''
-    alt: ''
-    description: ''
+    image: 'groups/journal-royal-microscopical.jpg'
+    alt: 'Journal of Royal Microscopical Society'
+    description: '1878-1922. This was the official journal of the elite society for microscopical science. Placed in direct competition with the Journal of the Quekett Microscopical Club, which designated itself as the place for amateur microscopy - Journal of Royal Microscopical Society was aimed at professionalising this observational community.'
   "the-geologist-a-popular-monthly-magazine-of-geology":
-    image: ''
-    alt: ''
-    description: ''
+    image: 'groups/geologist.jpg'
+    alt: 'The Geologist, a Popular Magazine of Geology'
+    description: '1858-64. This was a periodical established to capture an emerging middle and upper class amateur audience who were becoming fascinated by the emerging discipline of geology. Edited by S.J. Mackie, the geologist and fellow of the Geological Society, the journal would change names and editors in 1864.'
   "journal-of-botany-british-and-foreign":
-    image: ''
-    alt: ''
-    description: ''
+    image: 'groups/journal-botany-british-foreign.jpg'
+    alt: 'Journal of botany, British and foreign'
+    description: '1863-1922 – This was an early botanical publication produced by Robert Hardwicke, 2 years prior to establishing Science Gossip. It was co-edited by the botanists John Gilbert Baker and James Britten – who were both active contributors to Hardwicke’s other publications. From 1880-1882, the journal would change title and editor to Henry Trimin, a well known Botanist and F.R.S.'
   "the-geological-magazine-or-monthly-journal-of-geology":
-    image: ''
-    alt: ''
-    description: ''
+    image: 'groups/geological-magazine.jpg'
+    alt: 'The Geological Magazine, or Monthly Journal of Geology'
+    description: '1864-1900. Changing titles from The Geologist, a new editor was set in place. Thomas Rupert Jones, an F.R.S. with specialisation in geology and the popular new science of palaeontology, guided the journal to become a successful and popular magazine of science, with monthly circulation number exceeding 1000 copies.'
   "the-journal-of-horticulture-cottage-gardener-and-country-gentlemen":
-    image: ''
-    alt: ''
-    description: ''
+    image: 'groups/journal-horticulture.jpg'
+    alt: 'The Journal of horticulture, cottage gardener and country gentlemen'
+    description: '1878. This is the third journal, variously named the ‘Cottage Gardiner’. It was aimed at an amateur gardening audience, and was edited by Robert Hogg (a plant nursery owner) and George W. Johnson, the author and gardener. The journal changes names seven more times before terminating production during WWI.'
