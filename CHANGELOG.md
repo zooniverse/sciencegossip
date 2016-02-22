@@ -18,11 +18,19 @@
 
 **Closed issues:**
 
+- The symbol for Original page is redirecting to the main project page instead of the BHL document [\#43](https://github.com/zooniverse/BHL/issues/43)
+
+- Retired pages being served from the API [\#42](https://github.com/zooniverse/BHL/issues/42)
+
+- Broken periodical description [\#41](https://github.com/zooniverse/BHL/issues/41)
+
 - Tutorial button says "readymade.next" [\#40](https://github.com/zooniverse/BHL/issues/40)
 
 - "The gardener's magazine and register of rural & domestic improvement" doesn't appear among the periodicals in Recents; the  classified pages are not counted in the personal stats [\#38](https://github.com/zooniverse/BHL/issues/38)
 
 **Merged pull requests:**
+
+- Batch 4 covers and descriptions [\#44](https://github.com/zooniverse/BHL/pull/44) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Images and descriptions for batch 3 periodicals [\#39](https://github.com/zooniverse/BHL/pull/39) ([eatyourgreens](https://github.com/eatyourgreens))
 
