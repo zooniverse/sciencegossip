@@ -10,7 +10,7 @@ teampage = require './templates/team-page'
 subjectGroup = localStorage.getItem 'active-group'
 
 [apiHost, apiProxyPath] = if window.location.hostname is 'www.sciencegossip.org'
-  ['http://www.sciencegossip.org', '/_ouroboros_api/proxy']
+  ['https://www.sciencegossip.org', '/_ouroboros_api/proxy']
 else
   [null, null]
 
@@ -28,7 +28,7 @@ module.exports =
   description: '''
                  In the Victorian period, just like today, scientists and members of the public worked together to further scientific discovery. Before computers and cameras they had to draw what they saw. Their drawings are locked away in the pages of Victorian periodicals, such as <cite>Science Gossip</cite>, <cite>Recreative Science</cite> and <cite>The Intellectual Observer</cite>. Help us to classify their drawings and map the origins of citizen science.
                  '''
-  
+
 
   pages: [{
     key: 'periodicals'
@@ -47,7 +47,7 @@ module.exports =
       content: teampage team
     }]
   }]
-  
+
   externalLinks:
     Talk: 'http://talk.sciencegossip.org'
     Blog: 'http://blog.sciencegossip.org'
@@ -105,7 +105,7 @@ module.exports =
         placeholder: 'bird; landscape; crab; forest; man; woman; apple; pottery; cemetery; skull; fossil; microscopic view; meteor, meteorological observations'
       }]
       next: 'review'
-    parts: 
+    parts:
       type: 'drawing'
       question: 'Mark any species, inscriptions and contributors in the illustrations.'
       choices: [{
@@ -181,7 +181,7 @@ module.exports =
       choices: []
 
   firstTask: 'illustrations'
-  
+
   examples: require './content/examples'
 
   tutorialSteps: require './content/tutorial-steps'
