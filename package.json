@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "dependencies": {
     "marking-surface": "0.6.4",
-    "publisssh": "1.0.1",
+    "publisssh": "1.1.0",
     "zooniverse-readymade": "~1.0.0"
   },
   "scripts": {
     "start": "zooniverse-readymade serve --port 3050 --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
     "build": "zooniverse-readymade build --output ./build --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
-    "stage": "npm run build && publisssh ./build demo.zooniverse.org/bhl && rm -rf ./build",
-    "beta": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org/beta && rm -rf ./build",
-    "deploy": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org && rm -rf ./build"
+    "stage": "npm run build && publisssh ./build demo.zooniverse.org/bhl --force && rm -rf ./build",
+    "beta": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org/beta --force && rm -rf ./build",
+    "deploy": "npm run build && publisssh ./build zooniverse-static/www.sciencegossip.org --force && rm -rf ./build"
   }
 }
