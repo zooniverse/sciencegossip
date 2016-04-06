@@ -86,4 +86,4 @@ module.exports =
   "the-journal-of-horticulture-cottage-gardener-and-country-gentlemen":
     image: 'groups/journal-horticulture.jpg'
     alt: 'The Journal of horticulture, cottage gardener and country gentlemen'
-    description: '1878. This is the third journal, variously named the ‘Cottage Gardiner’. It was aimed at an amateur gardening audience, and was edited by Robert Hogg (a plant nursery owner) and George W. Johnson, the author and gardener. The journal changes names seven more times before terminating production during WWI.'
+    description: '1878. This is the third journal, variously named the ‘Cottage Gardener’. It was aimed at an amateur gardening audience, and was edited by Robert Hogg (a plant nursery owner) and George W. Johnson, the author and gardener. The journal changes names seven more times before terminating production during WWI.'
